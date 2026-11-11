@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="12/3–22 带孩子在代代木公园训练：25 处能连住 19 晚的住宿，按步行距离排序，附实时总价、地图、价格对比和订房须知。">
+<meta property="og:title" content="代代木公园住宿清单">
+<meta property="og:description" content="12/3–22 带孩子在代代木公园训练：25 处能连住 19 晚的住宿，按步行距离排序，附实时总价、地图、价格对比和订房须知。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Cpath fill='%23e2a80b' d='M17 31 L17 20 C10.5 20 4.5 15.5 3.5 6.5 C8 8.2 11.6 7.6 14.6 4.8 C15.6 7.6 16.3 9.6 17 12.6 C17.7 9.6 18.4 7.6 19.4 4.8 C22.4 7.6 26 8.2 30.5 6.5 C29.5 15.5 23.5 20 17 20 Z'/%3E%3C/svg%3E">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>代代木公园住宿清单</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&display=swap">
+<style>
+/* Layout: one long field sheet. Trip facts → picks → map beside a price/distance scatter → filterable list → notes.
+   Ginkgo yellow (Yoyogi in early December) is the single accent; park green only marks the park itself. */
+:root {
+  --bg: #f3f5f1;
+  --surface: #ffffff;
+  --surface-2: #eaefe9;
+  --ink: #17211c;
+  --ink-2: #48574f;
+  --ink-3: #6f7e76;
+  --line: #d9e0da;
+  --park: #3d7a57;
+  --park-fill: #d3e7d7;
+  --road: #cdd5ce;
+  --ginkgo: #e2a80b;
+  --ginkgo-ink: #7a5400;
+  --ginkgo-soft: #fff1c9;
+  --warn: #b0421b;
+  --warn-soft: #fbe5da;
+  --c-apt: #2a78d6;
+  --c-hotel: #eb6834;
+  --c-room: #1baf7a;
+  --font-display: "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif;
+  --font-body: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1411; --surface: #161d19; --surface-2: #1c2520; --ink: #e5ece7; --ink-2: #b3c1b9; --ink-3: #87968d;
+    --line: #27322c; --park: #6bb38a; --park-fill: #1c3326; --road: #2b3530; --ginkgo: #f2c14e; --ginkgo-ink: #f6d27a;
+    --ginkgo-soft: #382d10; --warn: #f08a5d; --warn-soft: #3a2219; --c-apt: #3987e5; --c-hotel: #d95926; --c-room: #199e70;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1411; --surface: #161d19; --surface-2: #1c2520; --ink: #e5ece7; --ink-2: #b3c1b9; --ink-3: #87968d;
+  --line: #27322c; --park: #6bb38a; --park-fill: #1c3326; --road: #2b3530; --ginkgo: #f2c14e; --ginkgo-ink: #f6d27a;
+  --ginkgo-soft: #382d10; --warn: #f08a5d; --warn-soft: #3a2219; --c-apt: #3987e5; --c-hotel: #d95926; --c-room: #199e70;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1140px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 32px 64px; display: grid; gap: 44px; }
+a { color: inherit; text-decoration-color: var(--ginkgo); text-underline-offset: 3px; text-decoration-thickness: 2px; }
+a:hover { color: var(--ginkgo-ink); }
+:focus-visible { outline: 2px solid var(--ginkgo); outline-offset: 2px; border-radius: 4px; }
+h1, h2 { font-family: var(--font-display); text-wrap: balance; margin: 0; letter-spacing: .01em; }
+h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 900; line-height: 1.2; }
+h2 { font-size: clamp(21px, 3vw, 26px); font-weight: 700; line-height: 1.3; }
+h3 { margin: 0; font-size: 16px; line-height: 1.45; font-weight: 700; }
+p { margin: 0; }
+.num, .tot, .dist b, .facts dd { font-variant-numeric: tabular-nums; }
+.eyebrow { font-size: 12.5px; letter-spacing: .12em; color: var(--ink-3); font-weight: 500; }
+.sub { display: block; font-size: 12.5px; color: var(--ink-3); line-height: 1.5; }
+
+/* header */
+header { display: grid; gap: 18px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand svg { width: 34px; height: 34px; flex: none; }
+.leaf { fill: var(--ginkgo); }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin: 0; }
+.facts div { background: var(--surface); padding: 12px 16px; display: grid; gap: 2px; }
+.facts dt { font-size: 12px; color: var(--ink-3); letter-spacing: .06em; }
+.facts dd { margin: 0; font-weight: 700; font-size: 16px; }
+.lead { max-width: 68ch; color: var(--ink-2); }
+
+/* picks */
+.picks { display: grid; gap: 14px; }
+.pick-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.pick { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; display: grid; gap: 8px; align-content: start; }
+.pick .k { font-size: 12.5px; font-weight: 700; color: var(--ginkgo-ink); letter-spacing: .08em; }
+.pick .v { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.2; }
+.pick p { font-size: 14px; color: var(--ink-2); }
+.pick a { font-weight: 500; }
+.callout { background: var(--ginkgo-soft); border-radius: 12px; padding: 14px 18px; font-size: 14.5px; max-width: 100%; }
+.callout b { color: var(--ginkgo-ink); }
+
+/* viz */
+.viz { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 22px; align-items: start; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 10px; min-width: 0; }
+.panel h3 { font-size: 15px; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.map { display: block; width: 100%; min-width: 560px; height: auto; }
+.scatter { display: block; width: 100%; min-width: 560px; height: auto; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--ink-2); }
+.lg { display: inline-flex; align-items: center; gap: 6px; }
+.lg i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; background: var(--c); }
+.lg.est i { background: transparent; border: 2px solid var(--ink-3); }
+.c-apt { --c: var(--c-apt); } .c-hotel { --c: var(--c-hotel); } .c-room { --c: var(--c-room); }
+.road { fill: none; stroke: var(--road); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.road-label { font-size: 12px; fill: var(--ink-3); letter-spacing: .1em; }
+.park { fill: var(--park-fill); stroke: var(--park); stroke-width: 1.5; }
+.park-label { font-family: var(--font-display); font-size: 17px; font-weight: 700; fill: var(--park); text-anchor: middle; }
+.park-sub { font-size: 12px; fill: var(--park); }
+.court circle { fill: var(--park); }
+.court text { font-size: 12px; fill: var(--park); font-weight: 700; }
+.gate rect { fill: var(--surface); stroke: var(--park); stroke-width: 1.5; }
+.stn rect { fill: var(--surface); stroke: var(--ink-2); stroke-width: 1.5; }
+.stn text { font-size: 12px; fill: var(--ink-2); font-weight: 500; paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; }
+.scale line { stroke: var(--ink-2); stroke-width: 1.5; }
+.scale text { font-size: 11.5px; fill: var(--ink-2); text-anchor: middle; }
+.north path { fill: var(--ink-2); }
+.north text { font-size: 11px; fill: var(--ink-2); text-anchor: middle; font-weight: 700; }
+.mk, .sd { cursor: pointer; }
+.mk circle:not(.dot0), .sd circle { fill: var(--c); stroke: var(--surface); stroke-width: 2; }
+.mk text, .sd text { fill: #fff; font-size: 12.5px; font-weight: 700; text-anchor: middle; pointer-events: none; font-variant-numeric: tabular-nums; }
+.mk.est circle:not(.dot0), .sd.est circle { fill: var(--surface); stroke: var(--c); stroke-width: 2.5; }
+.mk.est text, .sd.est text { fill: var(--ink); }
+.leader { stroke: var(--ink-3); stroke-width: 1; }
+.dot0 { fill: var(--ink-2); }
+.mk.dim, .sd.dim { opacity: .14; }
+.mk.hl circle:not(.dot0), .sd.hl circle { stroke: var(--ink); stroke-width: 3; }
+.grid { stroke: var(--line); stroke-width: 1; }
+.ytick { font-size: 12px; fill: var(--ink-3); text-anchor: end; font-variant-numeric: tabular-nums; }
+.xtick { font-size: 12px; fill: var(--ink-3); text-anchor: middle; font-variant-numeric: tabular-nums; }
+.axis-t { font-size: 12px; fill: var(--ink-2); text-anchor: end; }
+.zone { font-size: 12px; fill: var(--ginkgo-ink); font-weight: 700; }
+
+/* list */
+.list-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip { font: inherit; font-size: 13.5px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); padding: 5px 12px; border-radius: 999px; cursor: pointer; }
+.chip.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.sep { width: 1px; height: 20px; background: var(--line); margin-inline: 4px; }
+#list { display: grid; border-top: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: 44px minmax(0, 1fr) 128px 150px 196px 104px; gap: 14px 18px; padding: 18px 8px; border-bottom: 1px solid var(--line); align-items: start; scroll-margin-top: 80px; transition: background-color .2s; }
+.row.hl { background: var(--surface-2); }
+.row .no span { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--c); color: #fff; font-weight: 700; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+.row.est .no span { background: var(--surface); color: var(--ink); border: 2.5px solid var(--c); }
+.main { display: grid; gap: 4px; min-width: 0; }
+.orig { font-size: 12.5px; color: var(--ink-3); overflow-wrap: anywhere; }
+.where { font-size: 13px; color: var(--ink-2); }
+.note { font-size: 13.5px; color: var(--ink-2); max-width: 64ch; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags:empty { display: none; }
+.tag { font-size: 12px; font-weight: 700; padding: 1px 8px; border-radius: 6px; }
+.tag.pick { background: var(--ginkgo-soft); color: var(--ginkgo-ink); }
+.tag.warn { background: var(--warn-soft); color: var(--warn); }
+.dist b, .tot { font-size: 17px; font-weight: 700; display: block; line-height: 1.3; }
+.tot.est { font-size: 15px; }
+.room { display: grid; gap: 6px; font-size: 13.5px; }
+.facs { display: flex; flex-wrap: wrap; gap: 4px; }
+.fac { font-size: 11.5px; color: var(--ink-2); border: 1px solid var(--line); border-radius: 5px; padding: 0 6px; }
+.links { display: grid; gap: 4px; font-size: 13.5px; font-weight: 500; }
+.colhead { display: grid; grid-template-columns: 44px minmax(0, 1fr) 128px 150px 196px 104px; gap: 18px; padding: 0 8px 8px; font-size: 12px; color: var(--ink-3); letter-spacing: .06em; }
+
+/* notes */
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.note-card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.note-card h3 { font-size: 16.5px; }
+.note-card ul, .note-card ol { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; font-size: 14px; color: var(--ink-2); }
+.note-card p { font-size: 14px; color: var(--ink-2); }
+.note-card b { color: var(--ink); }
+.method { font-size: 13px; color: var(--ink-3); display: grid; gap: 6px; max-width: 90ch; }
+.method a { color: var(--ink-2); }
+
+@media (max-width: 960px) {
+  .viz { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 860px) {
+  .colhead { display: none; }
+  .row { grid-template-columns: 36px minmax(0, 1fr) minmax(0, 1fr); gap: 10px 14px; padding: 16px 4px; }
+  .row .no { grid-row: span 1; }
+  .row .main { grid-column: 2 / -1; }
+  .row .dist { grid-column: 2; }
+  .row .price { grid-column: 3; }
+  .row .room { grid-column: 2 / -1; }
+  .row .links { grid-column: 2 / -1; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .row { transition: none; } }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><path class="leaf" d="M17 31 L17 20 C10.5 20 4.5 15.5 3.5 6.5 C8 8.2 11.6 7.6 14.6 4.8 C15.6 7.6 16.3 9.6 17 12.6 C17.7 9.6 18.4 7.6 19.4 4.8 C22.4 7.6 26 8.2 30.5 6.5 C29.5 15.5 23.5 20 17 20 Z"/></svg>
+      <span class="eyebrow">带孩子来代代木公园训练 · 住宿备选 · 2026 年 11 月 12 日查询</span>
+    </div>
+    <h1>代代木公园周边住宿清单</h1>
+    <dl class="facts">
+      <div><dt>入住</dt><dd>12月3日（周四）</dd></div>
+      <div><dt>退房</dt><dd>12月22日（周二）</dd></div>
+      <div><dt>共计</dt><dd>19 晚</dd></div>
+      <div><dt>入住人</dt><dd>1 位大人 + 1 名 10 岁孩子</dd></div>
+      <div><dt>要求</dt><dd>独立房间，不和别人合住</dd></div>
+    </dl>
+    <p class="lead">按「步行到代代木公园最近入口」由近到远排列，编号和地图一致。价格是 11 月 12 日在 Airbnb、Booking 和官网按 <b>12/3–12/22、1 位大人 + 1 名 10 岁孩子</b> 实际查到的 19 晚总价，已含清洁费、服务费和税（另有说明的除外）。房源随时会被订走，价格也会变，下单前以页面显示为准。</p>
+  </header>
+
+  <section class="picks" aria-labelledby="h-picks">
+    <h2 id="h-picks">先看结论</h2>
+    <div class="pick-grid"><div class="pick"><span class="k">能连住 19 晚 · 整套最便宜</span><span class="v">¥156,812</span><p><a href="#r-LV102">#14 LaVie Hatsudai 102</a>：2023 年新楼，24.5㎡，有洗衣机和厨房，约人民币 6,600 元。只有一张双人床，步行 26 分钟到公园。</p></div>
+<div class="pick"><span class="k">离公园近又便宜</span><span class="v">¥177,327</span><p><a href="#r-SK501">#6 S-K MANSION 501</a>：步行 15 分钟到参宮橋門，约人民币 7,500 元。双人床同睡；同楼 103 号可分床，¥197,666。</p></div>
+<div class="pick"><span class="k">想分床睡</span><span class="v">¥185,347</span><p><a href="#r-A3">#19 初台/本町两张单人床公寓</a>：洗衣机加烘干，评分 4.84，订后 24 小时内可免费取消。步行 28 分钟。</p></div>
+<div class="pick"><span class="k">预算最低</span><span class="v">¥116,960</span><p><a href="#r-B1">#10 Takobeya</a>：独立房间、共用卫浴，不可退款。同类还有 <a href="#r-A15">#13</a>（¥125,697，带锁单间）。</p></div></div>
+    <div class="callout"><p><b>一句话：</b>12/3–22 这段时间，公园步行 10 分钟以内几乎订不到能连住 19 晚的便宜房，因为涩谷区住宅区这段时间不许民宿营业。性价比最高的是初台、本町、幡ヶ谷一带：步行 15–30 分钟，或坐 ¥100 的八公巴士；19 晚整套 ¥15.7–23 万（约人民币 6,600–9,800 元）。</p>
+<p style="margin-top:8px"><b>真想住在公园旁边：</b><a href="#r-OLY">#1 奥林匹克中心</a>步行 3 分钟，2 人每晚 ¥16,000，但最多住 10 晚，12/7 休馆，而且不能做饭，只适合住其中一段。如果训练方是 5 人以上的团体，可以问能不能用团体名义订，青少年团体价 2 人带卫浴每晚 ¥10,000。</p></div>
+  </section>
+
+  <section class="viz" aria-label="位置和价格">
+    <div class="panel">
+      <h3>位置示意（编号与下方清单一致）</h3>
+      <div class="legend"><span class="lg c-apt"><i></i>整套公寓 / 民宿（19）</span><span class="lg c-hotel"><i></i>酒店 / 公共宿舍（3）</span><span class="lg c-room"><i></i>单间 · 共用卫浴（3）</span><span class="lg est"><i></i>空心 = 估算价，非实时报价</span></div>
+      <div class="scroll-x"><svg class="map" viewBox="0 0 959 1006" role="img" aria-label="代代木公园与各住宿位置示意图"><path class="road" d="M606.6,1032.5 L622.2,1027.2 L631.4,1023.9 L634.9,1022.5 L638.4,1020.8 L641.5,1019.1 L644.5,1017.3 L647.8,1014.9 L650.7,1012.3 L653.9,1009.1 L656.5,1005.9 L658.9,1002.4 L663.7,994.9"/><path class="road" d="M713.4,973.0 L680.9,982.7 L678.9,983.5 L677.3,984.4 L675.9,985.4 L674.4,986.6 L673.2,987.9 L672.1,989.4 L666.2,998.4 L661.9,1004.7 L659.7,1007.8 L657.4,1010.7 L655.1,1013.2 L652.6,1015.8 L649.9,1018.0 L646.4,1020.5 L643.1,1022.4 L639.7,1024.3 L636.0,1025.8 L630.5,1028.0 L607.7,1036.2"/><path class="road" d="M592.3,989.1 L591.7,990.7 L583.9,1010.9 L583.4,1012.4 L582.8,1014.1"/><path class="road" d="M601.0,1038.5 L597.4,1039.8 L584.5,1045.1"/><path class="road" d="M584.1,1040.6 L599.9,1035.0"/><path class="road" d="M579.1,1037.9 L579.0,1035.3 L578.7,1027.4 L578.7,1025.3 L578.8,1023.0 L579.0,1020.8 L579.3,1018.5 L579.8,1016.2 L580.4,1014.0 L581.2,1011.8 L586.3,998.5 L589.1,991.7 L589.6,990.2 L590.2,988.6"/><path class="road" d="M614.5,959.1 L620.6,973.7 L621.3,975.4 L622.6,977.7 L631.0,991.6 L635.0,998.3 L636.3,1000.1"/><path class="road" d="M580.5,1054.5 L579.4,1042.8 L579.3,1040.7 L579.1,1037.9"/><path class="road" d="M584.5,1045.1 L577.4,1048.1"/><path class="road" d="M576.1,1043.6 L584.1,1040.6"/><path class="road" d="M577.4,1048.1 L556.2,1056.4"/><path class="road" d="M556.2,1056.4 L554.2,1052.2"/><path class="road" d="M506.3,1076.4 L507.4,1075.7 L511.7,1073.2 L512.0,1073.1 L516.8,1070.2 L532.2,1061.7 L534.1,1060.8"/><path class="road" d="M554.2,1052.2 L566.7,1047.0"/><path class="road" d="M556.2,1056.4 L545.4,1060.8 L539.0,1063.7 L536.1,1065.1 L530.0,1068.3 L519.9,1074.5 L516.8,1076.4 L516.2,1076.7"/><path class="road" d="M566.7,1047.0 L576.1,1043.6"/><path class="road" d="M582.8,1014.1 L582.2,1015.9 L581.8,1017.6 L581.4,1019.2 L581.2,1020.7 L581.0,1022.1 L580.8,1023.8 L580.8,1025.3 L580.8,1027.3 L581.1,1034.2 L581.2,1035.2 L581.2,1037.3 L582.2,1057.4 L582.9,1072.8 L583.2,1075.3 L583.4,1077.3 L583.6,1079.2 L583.7,1079.6 L584.0,1080.9 L584.3,1082.0"/><path class="road" d="M534.1,1060.8 L554.2,1052.2"/><path class="road" d="M559.9,1061.9 L556.9,1057.9 L556.2,1056.4"/><path class="road" d="M607.7,1036.2 L601.0,1038.5"/><path class="road" d="M599.9,1035.0 L606.6,1032.5"/><path class="road" d="M645.9,1015.2 L649.0,1019.8"/><path class="road" d="M644.5,1013.1 L643.9,1012.0 L638.9,1004.0"/><path class="road" d="M649.0,1019.8 L649.7,1020.6 L650.1,1021.3 L650.9,1022.2 L659.5,1031.6 L664.1,1036.6 L670.7,1044.0 L677.6,1051.5 L678.9,1053.0 L687.8,1062.7"/><path class="road" d="M644.5,1013.1 L645.9,1015.2"/><path class="road" d="M636.3,1000.1 L637.4,1001.8"/><path class="road" d="M637.4,1001.8 L638.9,1004.0"/><path class="road" d="M604.9,951.3 L605.3,949.3 L605.6,947.2 L605.7,945.2 L605.7,943.1 L605.5,940.9 L605.2,938.9 L604.7,936.7 L604.1,934.5 L603.3,932.6 L602.5,931.0 L601.6,929.4 L600.4,927.5 L599.3,925.8 L598.0,923.9"/><path class="road" d="M599.1,923.3 L601.6,926.8 L602.8,928.7 L603.7,930.5 L604.5,932.2 L605.3,934.1 L606.0,936.3 L606.5,938.7 L606.8,940.8 L607.0,943.0 L607.0,945.2 L606.9,947.3 L606.7,949.3 L606.2,951.5"/><path class="road" d="M606.2,951.5 L605.6,953.7 L604.8,955.9 L600.0,968.2 L599.1,970.7 L593.9,984.7 L593.3,986.2 L592.8,987.7"/><path class="road" d="M612.0,950.8 L612.6,952.6 L614.5,959.1"/><path class="road" d="M663.7,994.9 L668.2,988.2 L670.3,985.4 L672.8,982.9 L675.1,981.0 L677.6,979.3 L682.6,977.2 L689.7,975.2"/><path class="road" d="M614.5,959.1 L611.6,954.0"/><path class="road" d="M592.8,987.7 L592.3,989.1"/><path class="road" d="M590.2,988.6 L590.8,987.2"/><path class="road" d="M591.9,984.1 L593.5,980.2 L595.0,976.4 L596.0,974.2 L597.0,972.0 L597.9,969.9 L598.7,967.8 L603.4,955.7 L604.2,953.5 L604.9,951.3"/><path class="road" d="M590.8,987.2 L591.4,985.7 L591.9,984.1"/><path class="road" d="M611.6,954.0 L611.2,953.2 L610.3,951.0"/><path class="road" d="M609.3,944.4 L610.6,947.5 L612.0,950.8"/><path class="road" d="M574.4,887.1 L591.9,912.7 L599.1,923.3"/><path class="road" d="M689.7,975.2 L713.5,968.9 L719.9,966.3"/><path class="road" d="M598.0,923.9 L574.7,890.0"/><path class="road" d="M551.1,699.1 L551.4,709.4 L551.5,710.9 L551.5,713.0 L551.6,714.7 L551.8,722.6 L552.0,735.7 L552.1,743.8 L551.7,752.3 L551.4,760.1 L550.9,773.4 L550.7,775.5 L550.5,780.2 L550.2,786.4 L549.8,792.5 L549.1,802.5 L548.4,815.2 L548.2,818.2 L547.9,821.4 L546.9,828.7 L546.5,832.1 L546.4,833.2"/><path class="road" d="M574.7,890.0 L569.6,882.4 L567.8,879.8 L566.6,878.0 L562.4,871.7 L558.6,866.1 L557.3,864.1 L548.5,851.3 L547.3,849.5 L546.1,847.8 L545.1,846.3 L544.3,844.7 L543.6,843.2 L543.1,841.7 L542.6,840.1 L542.3,838.5"/><path class="road" d="M546.5,837.6 L546.6,838.4 L547.1,840.4 L547.8,843.0 L549.0,845.5 L550.7,848.3 L553.8,852.8 L558.5,859.1 L560.2,861.7 L561.0,863.1 L561.6,864.4 L563.0,867.4 L563.7,869.0 L564.3,870.4 L564.9,871.6 L565.7,873.1 L566.5,874.6 L568.0,877.0 L569.1,878.9 L574.4,887.1"/><path class="road" d="M548.5,710.8 L548.5,709.1 L548.4,704.7 L548.2,699.8 L548.1,695.0 L548.1,690.8"/><path class="road" d="M549.4,735.3 L548.6,714.4 L548.6,712.8"/><path class="road" d="M548.6,712.8 L548.5,710.8"/><path class="road" d="M542.3,838.5 L542.2,836.9 L542.0,835.4 L542.0,834.1 L542.1,832.9"/><path class="road" d="M542.1,832.9 L542.4,830.6 L542.9,827.1 L544.2,818.6 L544.7,815.2 L545.1,811.4 L545.3,807.0 L546.1,794.3 L547.4,775.4 L547.5,773.3 L547.9,768.8 L548.1,763.5 L548.5,757.8 L548.9,752.3"/><path class="road" d="M546.4,833.2 L546.4,835.3 L546.5,837.6"/><path class="road" d="M548.9,752.3 L549.3,743.8 L549.4,735.3"/><path class="road" d="M972.4,1129.6 L953.8,1108.4 L952.7,1107.1 L949.6,1103.9 L946.7,1100.7 L943.8,1097.2 L941.4,1094.2 L938.9,1090.4 L936.7,1086.4 L934.5,1082.2 L932.8,1078.2 L932.0,1076.2 L931.4,1074.2 L931.0,1071.8 L930.7,1069.4 L930.4,1067.0 L930.3,1064.5 L929.8,1057.5 L929.7,1055.8"/><path class="road" d="M888.4,988.9 L890.4,991.1 L892.7,994.0 L895.0,997.0 L896.5,999.0 L899.7,1003.7 L901.6,1006.3 L902.3,1006.9 L903.9,1008.7 L909.2,1013.5 L911.1,1015.0"/><path class="road" d="M910.2,1016.3 L908.2,1014.8 L902.1,1009.5 L900.6,1007.9 L899.1,1006.2 L894.3,999.1 L890.4,993.9 L889.6,992.8 L887.7,990.8"/><path class="road" d="M931.6,1056.4 L931.7,1057.3 L932.1,1064.4 L932.2,1066.7 L932.4,1069.1 L932.7,1071.5 L933.1,1073.7 L933.8,1075.7 L934.5,1077.6 L936.2,1081.4 L938.2,1085.4 L940.4,1089.4 L942.8,1093.3 L945.4,1096.5 L948.1,1099.6 L954.2,1106.1 L955.3,1107.3 L973.6,1127.8"/><path class="road" d="M911.1,1015.0 L913.6,1016.8 L917.4,1020.1 L919.4,1022.1 L921.2,1024.1 L922.9,1026.4 L924.4,1028.7"/><path class="road" d="M922.9,1029.7 L921.4,1027.5 L919.8,1025.3 L918.1,1023.3 L916.2,1021.4 L912.4,1018.1 L910.2,1016.3"/><path class="road" d="M929.7,1055.8 L928.9,1047.1 L928.7,1045.3 L928.4,1043.5 L928.0,1041.7 L927.6,1040.0 L926.6,1037.3 L925.5,1034.7 L924.3,1032.1 L922.9,1029.7"/><path class="road" d="M924.4,1028.7 L925.7,1030.8 L926.8,1033.0 L927.8,1035.3 L928.7,1037.6 L929.3,1039.5 L929.8,1041.3 L930.3,1043.2 L930.6,1045.1 L930.9,1047.1 L931.6,1056.4"/><path class="road" d="M719.9,966.3 L742.3,957.4 L757.3,951.6 L767.6,947.9 L770.3,946.9 L771.7,946.4"/><path class="road" d="M782.3,942.0 L784.0,941.3"/><path class="road" d="M814.5,897.9 L819.5,910.8"/><path class="road" d="M785.8,945.8 L784.1,946.4"/><path class="road" d="M819.5,910.8 L820.9,914.3"/><path class="road" d="M821.5,921.4 L816.9,909.9 L812.9,899.3 L812.5,898.1"/><path class="road" d="M811.5,894.8 L810.9,892.0 L810.6,889.3 L810.4,887.6 L809.2,868.0 L808.8,856.5"/><path class="road" d="M771.7,946.4 L781.3,942.4 L782.3,942.0"/><path class="road" d="M794.5,942.1 L789.3,944.3 L785.8,945.8"/><path class="road" d="M808.5,936.0 L801.2,939.3"/><path class="road" d="M798.5,935.4 L806.9,932.1"/><path class="road" d="M806.9,932.1 L820.0,926.9 L823.5,926.2"/><path class="road" d="M823.5,926.2 L821.5,921.4"/><path class="road" d="M813.3,894.4 L814.1,896.9"/><path class="road" d="M814.1,896.9 L814.5,897.9"/><path class="road" d="M812.5,898.1 L812.2,897.2 L811.5,894.8"/><path class="road" d="M784.0,941.3 L798.5,935.4"/><path class="road" d="M784.1,946.4 L778.1,948.8 L775.2,950.0 L773.5,950.8 L771.2,951.8 L768.9,952.8 L766.3,953.8 L742.6,963.3 L725.2,969.8"/><path class="road" d="M725.2,969.8 L721.6,971.1"/><path class="road" d="M801.2,939.3 L794.5,942.1"/><path class="road" d="M825.6,925.7 L828.1,929.2"/><path class="road" d="M887.7,990.8 L886.4,989.4 L884.5,987.4 L877.8,979.4 L875.9,977.5 L868.0,970.2 L861.0,963.5 L857.6,961.2 L851.1,956.5 L847.6,953.6 L845.1,951.0 L844.1,950.0"/><path class="road" d="M828.1,929.2 L830.8,932.7 L836.6,938.0 L846.7,947.4"/><path class="road" d="M844.1,950.0 L828.3,932.7 L826.0,929.6"/><path class="road" d="M846.7,947.4 L847.7,948.4 L853.7,953.9 L861.9,962.2 L867.2,967.2 L877.2,976.5 L879.0,978.4 L884.1,984.4 L884.8,985.3 L885.6,986.1 L888.4,988.9"/><path class="road" d="M826.0,929.6 L821.2,930.9 L817.6,932.1 L808.5,936.0"/><path class="road" d="M826.0,929.6 L823.5,926.2"/><path class="road" d="M820.9,914.3 L821.8,916.6 L824.3,923.1 L825.6,925.7"/><path class="road" d="M810.2,788.9 L810.9,787.1 L811.3,785.9 L812.9,782.5 L814.3,779.9 L816.1,776.9 L822.2,767.7 L831.6,753.4 L832.2,752.5 L832.4,752.2 L833.2,751.0 L839.4,741.6 L841.3,738.8 L842.9,736.0 L844.5,733.1 L844.9,732.3 L845.1,732.0 L847.7,727.4 L857.5,710.3 L859.3,707.4 L862.6,701.6 L863.4,700.3 L865.2,697.2"/><path class="road" d="M916.4,617.3 L915.8,618.9 L914.9,621.0 L914.0,622.8 L912.7,624.7 L906.5,633.7 L900.3,642.4 L896.9,648.5 L891.8,658.4 L891.7,658.5 L890.6,660.6 L889.8,661.8 L889.3,662.5 L885.0,669.0 L883.0,672.1 L878.3,679.2 L875.9,682.7 L875.1,683.7 L870.3,691.1 L869.5,692.6 L867.3,696.3 L866.4,697.9 L864.6,701.0 L858.6,711.4 L850.7,725.0 L846.6,732.3 L846.2,733.0 L845.9,733.6 L842.4,739.5 L835.8,749.7 L834.1,752.3 L833.4,753.3 L833.2,753.7 L831.8,755.8 L823.2,768.9 L816.4,780.1 L815.3,782.2 L814.3,784.2 L812.8,787.9 L812.1,789.6"/><path class="road" d="M810.1,843.4 L810.3,846.9 L811.0,862.1 L811.4,875.9 L812.0,887.2 L812.2,889.2 L812.4,890.3 L812.7,891.7 L813.3,894.4"/><path class="road" d="M808.8,856.5 L808.4,846.0 L808.3,842.8"/><path class="road" d="M808.5,806.7 L809.2,825.8 L809.9,839.5 L810.1,843.4"/><path class="road" d="M812.1,789.6 L811.4,791.7 L810.8,793.1 L809.8,795.9 L809.3,797.7 L808.8,800.4 L808.6,802.7 L808.5,806.7"/><path class="road" d="M806.7,806.7 L806.8,802.6 L807.2,798.4 L808.3,794.1 L809.5,790.8 L810.2,788.9"/><path class="road" d="M808.3,842.8 L808.1,839.4 L806.7,806.7"/><path class="road" d="M-48.7,43.2 L-45.7,43.1 L-39.0,43.0 L-27.2,42.8 L-12.8,42.6 L-4.5,42.6 L3.8,43.0 L6.3,43.3 L10.8,44.1 L11.1,44.1 L13.2,44.4 L16.0,44.9 L17.4,45.1 L23.4,46.1 L32.7,47.6 L41.5,49.1 L44.3,49.6 L45.3,49.8 L45.9,49.9 L60.8,52.6 L68.9,54.1 L70.7,54.4 L72.6,54.7 L80.9,55.8 L84.2,55.9 L90.4,56.1 L91.4,56.2 L103.0,56.1 L106.9,56.3 L115.9,56.3 L126.4,56.6 L128.2,56.6 L129.9,56.6 L140.6,56.8 L149.8,56.9 L151.3,56.9 L152.7,56.9 L154.2,56.9 L161.4,56.7 L167.4,56.5 L176.2,56.3 L179.4,56.2 L183.1,56.1 L192.4,55.7 L209.7,55.2 L210.3,55.1 L224.8,54.6 L228.8,54.5 L237.8,54.1 L243.6,53.8"/><path class="road" d="M79.8,598.3 L93.8,593.6 L106.5,588.5"/><path class="road" d="M109.8,591.9 L80.7,601.2"/><path class="road" d="M192.4,563.2 L191.0,563.7 L180.8,567.0 L178.3,567.9 L175.9,568.7"/><path class="road" d="M106.5,588.5 L109.7,587.2 L114.1,585.6 L125.8,581.3 L128.3,580.4 L132.4,578.9 L137.0,577.2 L145.7,574.1 L153.3,571.4 L162.0,568.3 L167.9,566.3 L176.0,563.5"/><path class="road" d="M175.9,568.7 L174.9,569.0 L162.0,573.5 L129.5,585.1 L128.6,585.4 L120.0,588.5 L113.0,590.8 L109.8,591.9"/><path class="road" d="M282.3,530.0 L213.0,554.8 L205.1,557.8"/><path class="road" d="M203.8,554.4 L211.8,551.6 L281.2,526.6"/><path class="road" d="M192.3,562.4 L190.9,562.9 L180.8,567.0"/><path class="road" d="M176.0,563.5 L176.5,563.3 L179.0,562.4 L190.6,558.2 L191.7,557.8"/><path class="road" d="M205.1,557.8 L192.3,562.4"/><path class="road" d="M179.0,562.4 L190.6,558.9 L191.8,558.6"/><path class="road" d="M191.8,558.6 L203.8,554.4"/><path class="road" d="M89.8,337.0 L89.0,337.2 L86.2,338.3 L81.8,339.8 L72.2,343.2 L69.4,344.1 L67.0,344.9 L58.1,348.0 L56.9,348.4 L47.5,351.6 L27.1,358.7 L23.3,359.9 L19.0,361.3"/><path class="road" d="M92.2,336.1 L89.8,337.0"/><path class="road" d="M209.6,305.7 L207.6,305.8 L199.3,306.0 L190.8,306.3 L190.2,306.3 L183.0,306.6 L178.5,306.9 L175.3,307.5 L172.6,308.2 L171.3,308.7 L167.5,310.1 L165.5,310.8 L158.2,313.3 L152.9,315.1 L149.4,316.2 L143.5,318.4 L141.4,319.1"/><path class="road" d="M373.1,274.1 L370.3,275.2 L357.2,280.0 L346.8,283.8 L340.6,286.1 L339.1,286.7 L335.1,288.1 L328.6,290.4 L324.3,292.1 L322.8,292.7 L317.5,294.6 L314.4,295.8 L312.1,296.5 L310.0,297.1 L308.1,297.3 L306.0,297.6 L299.8,298.1 L298.3,298.2 L294.8,298.4 L285.1,299.2 L280.3,299.5 L273.1,299.8 L270.7,300.0 L268.3,300.2 L263.3,300.7 L259.3,301.1 L255.6,301.4 L248.7,302.1 L243.9,302.5 L241.5,302.7 L237.0,303.1 L233.6,303.5 L230.3,303.8 L224.1,304.5 L216.4,305.2 L211.9,305.5 L209.6,305.7"/><path class="road" d="M141.4,319.1 L139.3,319.8 L127.9,323.9 L109.6,330.2 L92.2,336.1"/><path class="road" d="M243.0,55.5 L237.7,55.8 L215.1,56.8 L209.8,56.9 L208.9,57.0 L203.0,57.2 L188.4,57.6 L184.9,57.7 L183.1,57.7 L179.6,57.9 L176.3,58.1 L172.4,58.3 L156.0,58.4 L154.2,58.4 L141.9,58.3 L135.2,58.2 L129.9,58.1 L127.7,58.1 L126.4,58.0 L120.7,58.0 L116.5,57.9 L115.8,57.9 L101.1,57.7 L96.5,57.6 L90.7,57.6 L89.5,57.6 L81.5,57.3 L72.4,55.9 L70.4,55.6 L68.7,55.3 L59.8,53.8 L45.0,51.3 L44.0,51.2 L42.7,50.9 L31.6,49.1 L26.5,48.2 L22.4,47.5 L19.2,47.0 L15.7,46.5 L13.0,46.1"/><path class="road" d="M512.5,425.1 L500.4,434.4 L494.3,438.6 L489.3,441.9 L483.7,445.1 L475.2,449.5 L447.4,463.8 L430.7,473.4"/><path class="road" d="M427.8,468.6 L430.7,466.8 L438.5,462.5 L447.5,457.7 L455.9,453.1 L462.8,449.6 L470.2,446.2 L481.3,441.2 L486.4,438.4 L490.9,435.7 L495.3,432.8 L505.9,424.8 L506.8,424.2"/><path class="road" d="M348.4,500.6 L354.8,498.4"/><path class="road" d="M430.7,473.4 L420.3,479.5 L413.8,483.2 L408.8,485.2 L401.5,487.9 L393.0,490.9 L368.8,499.6 L367.8,500.0 L350.3,505.9"/><path class="road" d="M312.6,514.2 L322.9,510.1 L329.3,507.6 L334.5,505.6 L344.1,502.1"/><path class="road" d="M350.3,505.9 L318.7,517.8"/><path class="road" d="M344.1,502.1 L348.4,500.6"/><path class="road" d="M294.6,526.1 L282.3,530.0"/><path class="road" d="M318.7,517.8 L304.9,522.7"/><path class="road" d="M293.2,521.6 L303.1,518.0"/><path class="road" d="M281.2,526.6 L293.2,521.6"/><path class="road" d="M304.9,522.7 L294.6,526.1"/><path class="road" d="M303.1,518.0 L312.6,514.2"/><path class="road" d="M354.8,498.4 L361.3,496.1 L367.3,493.9 L379.1,489.7 L392.9,484.8 L399.6,482.5 L404.3,480.8 L412.1,477.5 L427.8,468.6"/><path class="road" d="M550.6,678.9 L550.7,685.4 L551.0,696.9 L551.1,699.1"/><path class="road" d="M548.1,690.8 L547.3,668.7"/><path class="road" d="M550.4,670.4 L550.6,678.9"/><path class="road" d="M548.7,583.6 L548.6,590.7 L548.2,598.6 L547.9,604.9 L547.8,610.9 L547.7,612.4 L547.4,618.1 L547.3,624.1 L547.2,629.3 L547.8,636.9 L548.5,644.1 L550.0,661.1 L550.2,667.9 L550.2,668.4 L550.4,670.4"/><path class="road" d="M547.3,668.7 L547.2,667.8 L547.2,667.3 L546.9,661.2 L545.6,646.9 L545.2,642.3 L544.1,628.4 L544.1,622.0 L544.4,614.3 L544.7,604.7 L544.8,602.9 L544.9,596.9 L545.2,583.3"/><path class="road" d="M545.2,583.3 L545.7,571.0 L546.0,559.4 L546.6,545.0 L546.7,539.5 L546.9,528.7 L547.4,512.9 L548.1,505.7 L548.3,503.9 L549.6,497.5 L550.5,493.7 L552.8,487.0 L555.8,477.1 L558.0,469.4 L559.4,464.1 L560.1,460.0 L560.8,455.4 L561.8,447.1 L562.1,444.3 L564.0,430.2 L564.8,422.6 L565.0,416.6 L565.0,413.8 L564.5,410.7 L564.0,407.7 L563.5,404.9 L562.6,402.5 L561.9,400.7 L561.3,399.3 L560.1,397.5 L558.5,395.0 L558.1,394.6 L556.2,392.0"/><path class="road" d="M558.2,390.4 L560.1,392.9 L562.0,395.3 L563.7,397.9 L565.1,400.6 L566.1,403.0 L567.0,405.8 L567.6,408.5 L568.0,411.1 L568.1,413.7 L567.9,417.8 L567.5,423.8 L566.4,434.3 L565.9,439.0 L564.8,447.4 L563.5,460.7 L562.9,464.8 L560.9,472.4 L556.2,487.8 L554.2,494.4 L553.2,497.9 L552.3,501.8 L551.6,506.1 L551.5,506.9 L551.0,513.1 L550.8,520.9 L550.6,530.0 L549.8,547.6 L549.3,561.0 L549.1,571.3 L548.8,580.1 L548.7,583.6"/><path class="road" d="M527.2,413.1 L512.5,425.1"/><path class="road" d="M506.8,424.2 L524.9,410.8"/><path class="road" d="M449.8,245.4 L447.0,246.7 L444.5,247.7 L438.2,250.0 L418.5,257.3 L417.1,257.9 L412.5,259.7 L411.5,260.0 L401.0,263.7 L389.8,267.7 L380.1,271.5 L374.4,273.6 L373.1,274.1"/><path class="road" d="M442.2,183.9 L441.4,188.9 L440.0,197.3 L439.2,202.1 L438.8,207.1 L439.0,214.3 L439.4,218.5 L440.2,223.2 L441.5,228.7 L443.2,233.8 L445.2,237.8 L448.1,242.9 L449.8,245.4 L451.7,247.8 L453.3,250.0 L458.0,255.8 L467.9,268.0 L472.6,273.6 L477.6,279.5 L479.2,281.5 L487.8,291.7 L492.8,297.7 L494.1,299.0 L496.4,302.2 L506.6,318.2 L511.5,325.9 L518.8,337.4 L521.0,340.7 L522.7,343.0"/><path class="road" d="M460.7,64.8 L460.4,67.5 L459.9,70.8 L456.8,91.1 L454.5,107.2 L454.0,111.0 L453.7,113.6 L453.5,115.4 L451.9,125.5 L450.3,134.7 L450.0,136.4 L447.9,149.1 L447.8,150.1 L447.3,152.5 L446.2,159.6 L445.9,161.2 L445.4,164.0 L443.9,171.9 L443.8,172.7"/><path class="road" d="M519.8,345.0 L518.1,342.6 L515.9,339.4 L508.3,327.4 L505.9,323.7 L503.3,319.6 L494.1,304.9 L491.5,300.8 L485.6,293.3 L477.5,283.0 L474.1,279.3 L467.1,270.6 L455.5,257.1"/><path class="road" d="M440.4,173.2 L441.3,167.3 L443.3,154.5 L444.0,150.2 L444.1,149.6 L448.8,120.5 L449.7,114.9 L450.4,110.3 L450.5,109.5 L452.3,99.1 L453.9,89.6 L455.3,80.2 L456.8,70.4 L457.3,67.0"/><path class="road" d="M443.8,172.7 L443.2,176.3"/><path class="road" d="M439.8,176.8 L440.4,173.2"/><path class="road" d="M455.5,257.1 L449.9,250.5 L448.7,248.9 L447.0,246.7 L445.2,244.2 L442.7,240.2 L440.6,235.6 L438.9,231.1 L437.4,226.4 L436.3,221.2 L435.7,216.0 L435.5,210.7 L435.7,206.1 L436.0,203.2 L436.5,199.0 L437.0,195.2 L437.8,190.0 L438.8,183.9"/><path class="road" d="M443.2,176.3 L442.2,183.9"/><path class="road" d="M438.8,183.9 L439.8,176.8"/><path class="road" d="M555.0,385.8 L558.2,390.4"/><path class="road" d="M556.2,392.0 L552.4,387.6"/><path class="road" d="M564.1,380.1 L580.5,366.5"/><path class="road" d="M545.1,399.1 L527.2,413.1"/><path class="road" d="M582.3,369.1 L566.1,382.6"/><path class="road" d="M566.1,382.6 L545.1,399.1"/><path class="road" d="M524.9,410.8 L543.1,396.6"/><path class="road" d="M543.1,396.6 L564.1,380.1"/><path class="road" d="M522.7,343.0 L524.2,345.0 L531.4,355.0 L552.4,382.5 L552.9,383.2 L555.0,385.8"/><path class="road" d="M552.4,387.6 L550.4,385.0 L547.3,381.0 L528.4,356.9 L523.7,350.5 L521.3,347.2 L519.8,345.0"/><path class="road" d="M641.5,315.7 L646.4,311.2 L655.7,302.6 L663.6,295.8 L666.5,293.4 L668.1,292.1 L668.9,291.5"/><path class="road" d="M670.8,294.1 L668.3,295.9 L665.9,297.7 L663.2,300.1 L657.9,304.7 L653.3,308.9 L650.8,311.1 L640.9,320.1 L636.5,324.2 L631.3,328.9 L630.5,329.6 L624.3,334.9 L609.2,347.6 L607.6,348.9 L605.4,351.2"/><path class="road" d="M673.2,288.8 L682.8,283.5 L689.8,279.8"/><path class="road" d="M593.7,355.1 L597.3,352.1 L599.4,350.5 L602.2,348.3"/><path class="road" d="M605.4,351.2 L601.9,353.8 L595.0,359.1"/><path class="road" d="M602.2,348.3 L605.5,345.9 L611.9,341.2 L618.3,336.1 L622.6,332.5"/><path class="road" d="M622.6,332.5 L625.8,329.7 L628.3,327.5 L631.3,324.8 L641.5,315.7"/><path class="road" d="M689.8,279.8 L691.4,278.9 L693.6,277.8 L696.8,276.1"/><path class="road" d="M691.2,282.6 L684.6,286.0 L675.2,291.2 L673.2,292.4"/><path class="road" d="M696.5,279.9 L692.9,281.8 L691.2,282.6"/><path class="road" d="M671.5,289.8 L673.2,288.8"/><path class="road" d="M673.2,292.4 L670.8,294.1"/><path class="road" d="M668.9,291.5 L671.5,289.8"/><path class="road" d="M705.1,275.3 L702.7,276.6 L696.5,279.9"/><path class="road" d="M750.3,253.4 L747.1,254.9 L728.7,263.7 L724.0,265.9 L712.7,271.3 L711.8,271.8 L705.1,275.3"/><path class="road" d="M595.0,359.1 L582.3,369.1"/><path class="road" d="M580.5,366.5 L593.7,355.1"/><path class="road" d="M690.1,141.4 L706.8,147.1"/><path class="road" d="M652.5,128.0 L660.2,131.0 L667.4,133.6 L673.8,135.9 L675.4,136.4 L677.5,137.0"/><path class="road" d="M696.8,276.1 L701.2,273.8 L706.3,271.1"/><path class="road" d="M714.3,151.9 L697.3,145.6"/><path class="road" d="M677.3,138.8 L674.9,138.0 L667.5,135.5 L660.4,133.1 L648.1,128.6 L644.7,127.3"/><path class="road" d="M697.3,145.6 L683.4,141.0 L682.2,140.6 L679.7,139.7"/><path class="road" d="M680.4,138.0 L682.8,138.9"/><path class="road" d="M682.8,138.9 L690.1,141.4"/><path class="road" d="M677.5,137.0 L680.4,138.0"/><path class="road" d="M678.5,139.2 L677.3,138.8"/><path class="road" d="M679.7,139.7 L678.5,139.2"/><path class="road" d="M914.8,616.8 L915.1,615.1 L915.2,613.6"/><path class="road" d="M916.7,609.2 L916.9,611.9 L916.8,614.6 L916.6,615.9 L916.4,617.3"/><path class="road" d="M911.6,623.9 L912.7,621.9 L913.5,620.3 L914.3,618.4 L914.8,616.8"/><path class="road" d="M865.2,697.2 L866.2,695.6 L868.4,692.0 L874.3,682.4 L878.5,676.1 L881.3,671.9 L887.4,662.7 L888.6,660.9 L889.9,658.8 L890.5,657.7 L896.9,645.1 L897.4,644.4 L899.2,641.7 L905.4,632.7 L906.7,630.8 L911.6,623.9"/><path class="road" d="M852.1,407.0 L851.9,421.7 L851.8,425.8 L851.9,431.7 L851.8,434.0"/><path class="road" d="M850.2,432.0 L850.4,425.8 L850.2,424.1 L850.3,421.7 L850.6,407.0"/><path class="road" d="M915.2,613.6 L915.3,610.7 L915.1,608.5 L914.8,606.3 L914.6,605.5 L914.0,603.2 L912.7,599.6 L908.2,589.2 L906.7,585.2 L901.8,572.6 L897.2,564.0 L895.6,561.4"/><path class="road" d="M897.3,560.9 L898.7,563.5 L899.2,564.4 L902.6,571.3 L904.7,575.7 L908.2,584.7 L908.5,585.3 L911.7,593.5 L915.2,602.1 L916.2,606.0 L916.7,609.2"/><path class="road" d="M871.2,479.9 L872.0,481.2 L874.7,485.5 L876.9,488.9 L878.8,492.3 L880.5,496.4 L881.8,501.1 L882.2,503.1 L882.4,503.8 L883.4,508.5 L883.7,509.9 L884.6,514.3 L885.4,517.9 L885.9,520.3 L887.2,526.3 L887.3,526.4 L888.6,532.5 L890.0,538.8 L890.4,540.3 L891.5,545.3 L891.6,545.9 L893.1,552.5 L894.1,555.5 L895.9,558.5 L897.3,560.9"/><path class="road" d="M869.8,480.8 L868.9,479.3 L862.9,469.8 L858.3,462.7 L853.8,456.2 L852.3,452.1 L851.3,448.7 L850.4,444.1 L850.2,441.5 L850.2,438.1 L850.2,436.9 L850.2,434.3"/><path class="road" d="M895.6,561.4 L894.2,559.0 L892.6,556.2 L890.4,548.3 L889.8,545.7 L888.5,540.8 L888.1,539.3 L885.5,526.8 L884.1,520.7 L883.6,518.5 L882.9,514.7 L880.5,503.9 L879.7,500.4 L879.2,498.6 L878.5,496.5 L877.6,494.3 L875.9,490.9 L870.6,482.1 L869.8,480.8"/><path class="road" d="M850.2,434.3 L850.2,432.0"/><path class="road" d="M851.8,434.0 L851.7,437.0 L851.7,438.1 L851.8,440.6 L852.0,443.7 L852.2,445.8 L852.7,448.3 L853.5,450.6 L854.2,452.4 L855.0,454.1 L860.6,462.8 L863.3,467.2 L867.9,474.6 L870.3,478.4 L871.2,479.9"/><path class="road" d="M840.6,341.1 L840.9,342.1 L842.6,346.3 L844.2,349.7 L848.3,356.3 L849.4,358.2 L849.6,358.9 L850.7,362.0 L851.3,363.6 L851.9,366.1 L852.1,367.6 L852.2,374.5 L852.4,386.5 L852.4,389.4 L852.4,390.5 L852.3,393.3 L852.1,402.4 L852.1,407.0"/><path class="road" d="M835.7,319.5 L835.9,322.2 L836.6,326.3 L837.7,330.9 L838.7,334.5 L840.1,339.9 L840.6,341.1"/><path class="road" d="M1036.8,282.5 L1023.9,284.3 L1016.3,285.2 L1005.6,285.7 L995.7,285.0 L984.3,283.1 L958.8,276.1 L942.9,270.9 L930.2,265.1 L895.9,246.0 L879.4,234.3"/><path class="road" d="M880.8,232.6 L896.6,244.6 L931.2,263.1 L944.6,268.9 L961.1,274.2 L985.0,280.7 L995.1,282.5 L1004.4,283.3 L1014.4,282.9 L1037.1,280.2"/><path class="road" d="M823.6,285.4 L822.8,281.9 L821.6,276.7 L821.5,275.9 L821.1,274.5 L820.1,269.7 L820.0,268.2 L820.0,267.1 L820.3,265.8 L820.8,264.6 L822.1,262.5 L824.2,258.8 L838.8,233.0 L839.8,231.2 L840.6,229.9 L841.8,227.7"/><path class="road" d="M843.7,227.5 L842.4,230.0 L830.6,251.2 L823.9,263.1 L822.9,264.7 L822.4,265.5 L822.0,266.4 L821.8,267.3 L821.7,268.3 L821.7,269.8 L822.6,274.1 L822.9,275.6 L826.2,289.0 L826.7,291.0 L829.6,303.1 L830.2,306.1 L832.0,313.0 L833.3,317.2 L834.4,318.4 L835.7,319.5"/><path class="road" d="M850.6,407.0 L850.6,389.4 L850.6,388.8 L850.7,382.2 L850.7,379.4 L849.7,373.8 L849.4,372.3 L849.0,369.8 L848.1,366.6 L847.0,363.7 L846.4,361.9 L845.2,359.3 L844.1,357.2 L842.0,353.9 L839.8,350.2 L837.8,345.4 L837.3,343.8 L836.7,341.5 L836.0,338.7 L832.8,324.4 L829.0,308.0 L827.9,303.5 L825.5,293.8 L824.9,291.4 L824.5,289.7 L823.6,285.4"/><path class="road" d="M803.6,233.7 L812.5,231.0 L820.7,228.9 L826.2,227.7"/><path class="road" d="M826.6,229.8 L821.2,230.9 L813.3,232.9 L807.9,234.6 L805.0,235.5"/><path class="road" d="M890.8,139.6 L890.0,133.3 L890.3,121.8 L891.0,115.6 L891.5,113.0 L892.2,109.7 L893.0,105.5 L895.7,91.2 L898.1,77.1 L898.3,75.6 L898.7,73.3 L898.8,72.6 L902.6,49.7 L902.8,48.8 L903.2,46.4"/><path class="road" d="M893.3,119.9 L893.1,127.5 L893.4,135.2 L893.9,141.5"/><path class="road" d="M742.9,140.1 L748.0,139.7 L749.3,139.6 L752.3,139.3"/><path class="road" d="M706.3,271.1 L710.7,268.9 L727.4,261.2 L730.0,260.0 L742.0,254.6 L745.1,253.1 L746.0,252.6 L749.5,251.0"/><path class="road" d="M770.8,244.3 L767.9,245.2 L764.9,246.2 L762.1,247.4 L759.2,248.8 L755.9,250.7 L754.4,251.6 L750.3,253.4"/><path class="road" d="M770.3,242.1 L773.8,241.2 L789.3,237.7 L795.2,236.2"/><path class="road" d="M803.1,236.1 L795.7,238.5 L789.8,240.1 L777.5,242.8 L770.8,244.3"/><path class="road" d="M752.9,142.1 L749.6,142.4 L741.6,143.0 L734.8,143.4 L732.8,143.9 L730.6,144.6"/><path class="road" d="M749.5,251.0 L753.9,248.9 L757.4,247.1 L761.2,245.3 L763.5,244.3 L767.4,242.9 L770.3,242.1"/><path class="road" d="M706.8,147.1 L708.1,147.4 L709.3,147.5 L710.3,147.4 L711.5,147.2 L712.8,146.9 L714.3,146.4 L714.9,146.2 L727.6,141.4 L728.9,141.1 L730.5,140.8 L734.1,140.8"/><path class="road" d="M717.5,151.3 L716.1,151.6 L714.3,151.9"/><path class="road" d="M734.1,140.8 L742.9,140.1"/><path class="road" d="M719.8,149.8 L717.5,151.3"/><path class="road" d="M795.2,236.2 L800.6,234.6 L803.6,233.7"/><path class="road" d="M805.0,235.5 L803.1,236.1"/><path class="road" d="M730.6,144.6 L727.2,145.9 L724.5,147.2 L719.8,149.8"/><path class="road" d="M879.4,234.3 L875.5,231.8 L872.6,230.2 L869.6,228.9 L867.0,228.0 L864.7,227.3 L862.3,226.9 L859.2,226.6 L850.6,226.8"/><path class="road" d="M834.5,226.3 L839.6,225.5 L840.8,225.3 L843.3,225.0"/><path class="road" d="M856.1,201.6 L858.0,197.9 L861.2,191.2 L863.4,187.2 L865.9,182.1 L866.4,181.1 L867.0,179.7 L870.6,172.6 L871.1,171.5 L872.6,168.3 L873.9,165.6"/><path class="road" d="M841.8,227.7 L839.5,228.0 L837.0,228.3"/><path class="road" d="M843.7,227.5 L841.8,227.7"/><path class="road" d="M850.6,226.8 L848.2,227.0 L846.4,227.2 L843.7,227.5"/><path class="road" d="M849.7,224.2 L853.9,223.9 L857.3,223.9 L860.4,224.1 L863.5,224.6 L866.5,225.3 L869.4,226.4 L872.8,227.9 L876.3,229.8 L880.8,232.6"/><path class="road" d="M874.0,168.7 L872.4,172.0 L868.8,179.3 L868.2,180.6 L867.5,182.0 L864.6,188.0 L862.6,191.8 L861.1,194.9 L859.3,198.5 L857.4,202.3"/><path class="road" d="M893.9,141.5 L891.1,141.8 L888.7,142.0 L887.4,142.3 L886.2,143.0 L885.2,145.0 L879.6,156.8 L877.1,162.2 L876.7,163.0 L875.2,166.1"/><path class="road" d="M841.8,227.7 L843.3,225.0"/><path class="road" d="M843.3,225.0 L845.0,221.6 L849.2,214.1 L850.9,211.0 L854.4,204.8 L856.1,201.6"/><path class="road" d="M843.3,225.0 L845.2,224.7"/><path class="road" d="M826.2,227.7 L830.5,227.0"/><path class="road" d="M845.2,224.7 L847.9,224.3 L849.7,224.2"/><path class="road" d="M845.2,224.7 L843.7,227.5"/><path class="road" d="M837.0,228.3 L833.0,228.8 L826.6,229.8"/><path class="road" d="M830.5,227.0 L834.5,226.3"/><path class="road" d="M873.9,165.6 L875.4,162.4 L878.1,156.8 L884.1,144.4 L885.5,141.4 L887.1,140.0 L888.6,139.9 L890.8,139.6"/><path class="road" d="M875.2,166.1 L874.0,168.7"/><path class="road" d="M857.4,202.3 L855.7,205.5 L853.3,210.0 L850.6,214.7 L848.2,219.0 L847.0,221.1 L845.2,224.7"/><path class="road" d="M243.6,53.8 L246.6,53.7 L248.8,53.6 L253.2,53.5 L255.6,53.3 L258.1,53.3 L260.3,53.2 L271.7,52.7 L280.7,52.3 L286.7,52.1 L293.8,51.8 L295.7,51.7"/><path class="road" d="M295.6,53.6 L293.9,53.7 L285.2,54.0 L278.0,54.3 L273.9,54.4 L265.6,54.7 L260.1,54.9 L255.6,55.0 L250.3,55.2 L246.6,55.4 L243.0,55.5"/><path class="road" d="M457.3,67.0 L454.2,66.6 L440.8,65.0 L437.2,64.5 L428.7,63.2 L420.0,62.0 L418.9,61.9 L409.9,60.6 L400.8,59.4 L393.2,58.4 L390.6,58.1 L389.4,57.9 L387.9,57.7"/><path class="road" d="M388.2,56.0 L389.6,56.2 L394.8,56.9 L404.5,58.3 L408.8,58.9 L419.1,60.2 L419.8,60.3 L437.7,62.8 L440.2,63.1 L448.0,64.0 L454.5,64.6 L457.7,64.7 L460.7,64.8"/><path class="road" d="M457.3,67.0 L457.7,64.7 L457.9,61.8 L458.2,57.8 L458.3,56.3 L458.9,44.9 L460.7,20.0 L460.8,17.7 L460.9,12.4 L461.3,5.5 L461.4,2.1 L461.4,-2.4 L461.2,-4.9 L460.7,-9.5 L459.6,-15.5 L458.1,-20.6 L457.2,-23.1"/><path class="road" d="M459.7,-23.6 L460.4,-21.1 L461.7,-15.9 L462.8,-9.4 L463.4,0.3 L463.4,5.5 L462.8,20.5 L462.3,35.5 L461.7,45.6 L461.0,58.0 L460.8,61.9 L460.7,64.8"/><path class="road" d="M524.9,81.0 L523.2,80.8 L520.9,80.5 L519.2,80.4 L508.1,79.4 L502.3,78.7 L497.2,77.6 L492.5,76.3 L491.3,75.9 L489.5,75.3 L479.5,72.4 L472.6,70.3 L463.1,67.9 L460.4,67.5 L457.3,67.0"/><path class="road" d="M460.7,64.8 L463.6,65.1 L466.5,65.6 L469.4,66.2 L472.3,66.9 L475.1,67.6 L481.2,69.5 L489.0,71.8 L490.4,72.3 L492.0,72.8"/><path class="road" d="M387.9,57.7 L385.4,57.3 L382.8,56.9 L377.6,56.3 L368.4,55.1 L354.6,53.1 L342.9,52.4 L341.5,52.3 L340.4,52.2 L332.4,52.1 L331.0,52.1 L329.7,52.1 L310.1,53.0 L305.5,53.2 L297.8,53.6 L295.6,53.6"/><path class="road" d="M295.7,51.7 L297.8,51.6 L306.7,51.3 L317.7,51.0 L328.7,50.6 L329.7,50.6 L330.9,50.6 L338.9,50.5 L339.7,50.6 L341.6,50.7 L354.8,51.4 L370.1,53.4 L384.1,55.3 L385.7,55.6 L388.2,56.0"/><path class="road" d="M528.3,81.9 L524.9,81.0"/><path class="road" d="M525.7,78.8 L529.2,79.2"/><path class="road" d="M535.0,83.9 L528.3,81.9"/><path class="road" d="M492.0,72.8 L497.8,74.5 L500.6,75.2 L506.0,76.0 L517.5,77.1 L520.0,77.4 L522.4,77.4"/><path class="road" d="M644.7,127.3 L641.1,125.8 L618.3,116.1 L601.1,109.5 L600.4,109.3 L597.8,108.3"/><path class="road" d="M643.6,124.5 L648.9,126.6 L652.5,128.0"/><path class="road" d="M596.0,105.1 L601.4,106.9 L603.3,107.6"/><path class="road" d="M597.8,108.3 L595.0,107.3"/><path class="road" d="M603.3,107.6 L610.7,110.6 L620.9,114.8 L626.7,117.2 L632.4,119.6 L638.2,122.1 L641.9,123.7 L643.6,124.5"/><path class="road" d="M529.2,79.2 L532.7,80.2 L534.4,80.9 L536.1,81.5 L538.4,82.7 L543.4,85.0 L547.6,86.8 L555.6,90.0 L559.4,91.6 L562.3,92.7 L580.5,99.3 L590.6,103.1 L591.0,103.3 L596.0,105.1"/><path class="road" d="M595.0,107.3 L590.2,105.5 L582.9,102.8 L574.8,99.8 L569.6,98.2 L561.5,95.2 L558.4,94.0 L554.7,92.4 L543.4,87.6 L542.5,87.2 L535.0,83.9"/><path class="road" d="M905.4,46.7 L905.0,49.2 L900.8,73.6 L900.4,76.0 L896.2,101.6 L894.9,109.5 L894.5,112.5"/><path class="road" d="M903.2,46.4 L903.5,44.3"/><path class="road" d="M905.7,44.6 L905.4,46.7"/><path class="road" d="M894.5,112.5 L894.1,115.3 L893.3,119.9"/><path class="road" d="M915.6,-19.7 L915.2,-17.1 L910.9,11.1 L906.2,40.9 L906.0,41.9 L905.7,44.6"/><path class="road" d="M903.5,44.3 L903.8,41.5 L905.5,30.7 L908.7,10.8 L909.1,8.0 L912.9,-15.8 L913.1,-17.4 L913.5,-19.8"/><path class="park" d="M626.9,712.0 L626.2,712.8 L627.3,714.4 L626.3,715.4 L638.7,734.9 L641.5,737.7 L648.3,741.9 L653.4,745.1 L656.5,748.4 L660.7,755.5 L721.6,728.2 L732.9,752.0 L744.7,777.0 L749.0,774.7 L747.2,771.2 L743.3,762.5 L739.7,754.3 L736.1,746.1 L731.2,734.4 L729.4,724.6 L728.2,703.1 L704.8,704.2 L703.0,705.4 L667.0,707.0 L663.6,707.2 L662.6,705.4 L650.9,705.8 L643.3,707.0 L634.3,709.6 L626.9,712.0 Z"/><path class="park" d="M620.5,706.8 L622.4,707.4 L640.4,701.9 L649.0,700.4 L661.6,699.6 L684.3,696.8 L696.1,695.8 L704.4,696.9 L721.7,695.3 L731.8,694.7 L739.7,694.7 L749.6,693.5 L759.9,693.2 L770.1,692.5 L780.6,690.6 L783.8,689.9 L798.7,681.5 L779.5,663.9 L768.0,638.2 L737.7,626.5 L716.4,603.5 L694.0,579.3 L689.3,571.8 L687.4,565.8 L684.9,551.0 L673.7,551.3 L673.3,558.9 L660.3,559.0 L650.6,570.4 L648.2,573.6 L638.7,586.0 L617.7,576.3 L612.5,614.7 L606.6,653.2 L605.2,664.8 L605.1,667.8 L605.4,674.4 L605.9,677.4 L609.1,686.1 L612.6,693.0 L620.5,706.8 Z"/><text class="park-label" x="707" y="628">代代木公园</text><text class="park-sub" x="616" y="744">B区</text><g class="court"><circle cx="677.8" cy="734.5" r="5"/><text x="685.8" y="738.5">篮球场</text></g><text class="road-label" transform="translate(515,564) rotate(-72)">山手通り</text><text class="road-label" transform="translate(289,386) rotate(-6)">甲州街道</text><g class="gate"><rect x="608.9" y="611.7" width="6" height="6" transform="rotate(45 611.9 614.7)"/></g><g class="gate"><rect x="603.5" y="646.8" width="6" height="6" transform="rotate(45 606.5 649.8)"/></g><g class="gate"><rect x="773.0" y="679.5" width="6" height="6" transform="rotate(45 776.0 682.5)"/></g><g class="gate"><rect x="700.7" y="682.8" width="6" height="6" transform="rotate(45 703.7 685.8)"/></g><g class="gate"><rect x="656.3" y="683.0" width="6" height="6" transform="rotate(45 659.3 686.0)"/></g><g class="stn"><rect x="516.3" y="413.1" width="7" height="7" rx="1.5"/><text x="526.8" y="409.6" text-anchor="start">初台</text></g><g class="stn"><rect x="346.1" y="500.1" width="7" height="7" rx="1.5"/><text x="356.6" y="517.6" text-anchor="start">幡ヶ谷</text></g><g class="stn"><rect x="172.5" y="578.6" width="7" height="7" rx="1.5"/><text x="183.0" y="576.1" text-anchor="start">笹塚</text></g><g class="stn"><rect x="650.7" y="466.7" width="7" height="7" rx="1.5"/><text x="661.2" y="463.2" text-anchor="start">参宮橋</text></g><g class="stn"><rect x="563.3" y="668.3" width="7" height="7" rx="1.5"/><text x="559.8" y="686.8" text-anchor="end">代々木八幡</text></g><g class="stn"><rect x="586.5" y="681.6" width="7" height="7" rx="1.5"/><text x="596.0" y="701.1" text-anchor="start">代々木公園</text></g><g class="stn"><rect x="399.6" y="681.8" width="7" height="7" rx="1.5"/><text x="396.1" y="689.3" text-anchor="end">代々木上原</text></g><g class="stn"><rect x="809.1" y="655.3" width="7" height="7" rx="1.5"/><text x="805.6" y="652.8" text-anchor="end">原宿</text></g><g class="stn"><rect x="802.8" y="351.4" width="7" height="7" rx="1.5"/><text x="799.3" y="348.9" text-anchor="end">代々木</text></g><g class="stn"><rect x="744.5" y="356.8" width="7" height="7" rx="1.5"/><text x="741.0" y="375.3" text-anchor="end">南新宿</text></g><g class="stn"><rect x="485.2" y="220.3" width="7" height="7" rx="1.5"/><text x="495.7" y="217.8" text-anchor="start">西新宿五丁目</text></g><g class="stn"><rect x="291.3" y="173.0" width="7" height="7" rx="1.5"/><text x="301.8" y="170.5" text-anchor="start">中野新橋</text></g><g class="stn"><rect x="647.4" y="942.6" width="7" height="7" rx="1.5"/><text x="643.9" y="950.1" text-anchor="end">神泉</text></g><g class="stn"><rect x="797.0" y="923.6" width="7" height="7" rx="1.5"/><text x="793.5" y="942.1" text-anchor="end">渋谷</text></g><g class="stn"><rect x="901.5" y="42.9" width="7" height="7" rx="1.5"/><text x="898.0" y="40.4" text-anchor="end">東新宿</text></g><g class="scale"><line x1="837" y1="984" x2="937" y2="984"/><line x1="837" y1="980" x2="837" y2="988"/><line x1="937" y1="980" x2="937" y2="988"/><text x="887" y="976">500 米 ≈ 步行 6 分钟</text></g><g class="north"><path d="M24,30 l6,16 l-6,-4 l-6,4 Z"/><text x="24" y="26">N</text></g><g class="mk c-hotel est" data-id="OLY" tabindex="0" role="button" aria-label="1 国立奥林匹克纪念青少年综合中心（オリセン）"><circle cx="617.6" cy="575.9" r="12"/><text x="617.6" y="580.2">1</text><title>1. 国立奥林匹克纪念青少年综合中心（オリセン）｜步行约3分钟到参宮橋門</title></g><g class="mk c-apt" data-id="LM46639" tabindex="0" role="button" aria-label="2 LiVEMAX 涩谷代代木公园（神山町，需付满 30 天）"><circle cx="549.8" cy="815.6" r="12"/><text x="549.8" y="819.9">2</text><title>2. LiVEMAX 涩谷代代木公园（神山町，需付满 30 天）｜步行约14分钟到西門</title></g><g class="mk c-apt" data-id="A8" tabindex="0" role="button" aria-label="3 Yoyogi House（参宮橋站附近）"><circle cx="703.9" cy="429.2" r="12"/><text x="703.9" y="433.5">3</text><title>3. Yoyogi House（参宮橋站附近）｜步行约15分钟到参宮橋門</title></g><g class="mk c-apt" data-id="A1" tabindex="0" role="button" aria-label="4 初台站 3 分钟 · 新开 1 室公寓"><circle cx="548.0" cy="444.5" r="12"/><text x="548.0" y="448.8">4</text><title>4. 初台站 3 分钟 · 新开 1 室公寓｜步行约15分钟到参宮橋門</title></g><g class="mk c-apt" data-id="YT301" tabindex="0" role="button" aria-label="5 Yoyogi Tour 301（初台 2 丁目，可分床）"><circle cx="467.2" cy="516.3" r="12"/><text x="467.2" y="520.6">5</text><title>5. Yoyogi Tour 301（初台 2 丁目，可分床）｜步行约15分钟到参宮橋門</title></g><g class="mk c-apt" data-id="SK501" tabindex="0" role="button" aria-label="6 S-K MANSION 501（初台 2 丁目）"><circle cx="452.6" cy="495.3" r="12"/><text x="452.6" y="499.6">6</text><title>6. S-K MANSION 501（初台 2 丁目）｜步行约15分钟到参宮橋門</title></g><g class="mk c-apt" data-id="LM49018" tabindex="0" role="button" aria-label="7 LiVEMAX 代々木上原站前（大山町，需付满 30 天）"><circle cx="375.9" cy="693.9" r="12"/><text x="375.9" y="698.2">7</text><title>7. LiVEMAX 代々木上原站前（大山町，需付满 30 天）｜步行约19分钟到参宮橋門</title></g><g class="mk c-apt" data-id="LM259059" tabindex="0" role="button" aria-label="8 LiVEMAX 初台 EAST 西参道塔（代々木 4 丁目，需付满 30 天）"><circle cx="590.9" cy="364.3" r="12"/><text x="590.9" y="368.6">8</text><title>8. LiVEMAX 初台 EAST 西参道塔（代々木 4 丁目，需付满 30 天）｜步行约20分钟到参宮橋門</title></g><g class="mk c-hotel est" data-id="SAKURA" tabindex="0" role="button" aria-label="9 幡谷樱花酒店 Sakura Hotel Hatagaya"><circle cx="349.7" cy="529.7" r="12"/><text x="349.7" y="534.0">9</text><title>9. 幡谷樱花酒店 Sakura Hotel Hatagaya｜步行约21分钟到参宮橋門</title></g><g class="mk c-room" data-id="B1" tabindex="0" role="button" aria-label="10 Takobeya（本町 1-25-1）"><line class="leader" x1="384.7" y1="437.4" x2="387.7" y2="436.1"/><circle class="dot0" cx="384.7" cy="437.4" r="2"/><circle cx="387.7" cy="436.1" r="12"/><text x="387.7" y="440.4">10</text><title>10. Takobeya（本町 1-25-1）｜步行约22分钟到参宮橋門</title></g><g class="mk c-apt" data-id="A11" tabindex="0" role="button" aria-label="11 Shibuya Night（神泉站附近）"><circle cx="633.0" cy="928.8" r="12"/><text x="633.0" y="933.1">11</text><title>11. Shibuya Night（神泉站附近）｜步行约22分钟到渋谷門</title></g><g class="mk c-apt" data-id="A2" tabindex="0" role="button" aria-label="12 初台 · Loft 公寓（含沙发床）"><circle cx="472.9" cy="411.6" r="12"/><text x="472.9" y="415.9">12</text><title>12. 初台 · Loft 公寓（含沙发床）｜步行约23分钟到参宮橋門</title></g><g class="mk c-room" data-id="A15" tabindex="0" role="button" aria-label="13 幡ヶ谷 · 12 间单人房小旅舍（No.12）"><line class="leader" x1="365.2" y1="445.2" x2="366.6" y2="450.6"/><circle class="dot0" cx="365.2" cy="445.2" r="2"/><circle cx="366.6" cy="450.6" r="12"/><text x="366.6" y="454.9">13</text><title>13. 幡ヶ谷 · 12 间单人房小旅舍（No.12）｜步行约24分钟到参宮橋門</title></g><g class="mk c-apt" data-id="LV102" tabindex="0" role="button" aria-label="14 LaVie Hatsudai 102（本町 2 丁目，2023 年新楼）"><circle cx="436.6" cy="390.1" r="12"/><text x="436.6" y="394.4">14</text><title>14. LaVie Hatsudai 102（本町 2 丁目，2023 年新楼）｜步行约26分钟到参宮橋門</title></g><g class="mk c-room" data-id="B2" tabindex="0" role="button" aria-label="15 新宿東京暖房（本町 6 丁目）"><line class="leader" x1="349.4" y1="432.1" x2="346.7" y2="434.5"/><circle class="dot0" cx="349.4" cy="432.1" r="2"/><circle cx="346.7" cy="434.5" r="12"/><text x="346.7" y="438.8">15</text><title>15. 新宿東京暖房（本町 6 丁目）｜步行约26分钟到参宮橋門</title></g><g class="mk c-apt" data-id="JING" tabindex="0" role="button" aria-label="16 Shibuya SG House / JING HOUSE（幡ヶ谷 1-20-1）"><circle cx="284.3" cy="557.5" r="12"/><text x="284.3" y="561.8">16</text><title>16. Shibuya SG House / JING HOUSE（幡ヶ谷 1-20-1）｜步行约26分钟到参宮橋門</title></g><g class="mk c-apt" data-id="B4" tabindex="0" role="button" aria-label="17 Bamboo Room 105（本町）"><line class="leader" x1="343.5" y1="415.8" x2="341.8" y2="409.4"/><circle class="dot0" cx="343.5" cy="415.8" r="2"/><circle cx="341.8" cy="409.4" r="12"/><text x="341.8" y="413.7">17</text><title>17. Bamboo Room 105（本町）｜步行约27分钟到参宮橋門</title></g><g class="mk c-apt" data-id="A4" tabindex="0" role="button" aria-label="18 Style Wood Nishi-Shinjuku（本町）"><circle cx="430.1" cy="318.5" r="12"/><text x="430.1" y="322.8">18</text><title>18. Style Wood Nishi-Shinjuku（本町）｜步行约28分钟到参宮橋門</title></g><g class="mk c-apt" data-id="A3" tabindex="0" role="button" aria-label="19 初台/本町 · 两张单人床公寓（限 2 人）"><circle cx="417.8" cy="352.3" r="12"/><text x="417.8" y="356.6">19</text><title>19. 初台/本町 · 两张单人床公寓（限 2 人）｜步行约28分钟到参宮橋門</title></g><g class="mk c-apt" data-id="LIV102" tabindex="0" role="button" aria-label="20 Livion III 102（幡ヶ谷 3 丁目，33.7㎡）"><circle cx="297.5" cy="437.8" r="12"/><text x="297.5" y="442.1">20</text><title>20. Livion III 102（幡ヶ谷 3 丁目，33.7㎡）｜步行约29分钟到参宮橋門</title></g><g class="mk c-apt" data-id="FL204" tabindex="0" role="button" aria-label="21 FL Residence 204（本町 4 丁目）"><circle cx="427.8" cy="283.6" r="12"/><text x="427.8" y="287.9">21</text><title>21. FL Residence 204（本町 4 丁目）｜步行约30分钟到参宮橋門</title></g><g class="mk c-apt" data-id="TF406" tabindex="0" role="button" aria-label="22 T-FLAT SASAZUKA 406（幡ヶ谷 2 丁目）"><circle cx="253.4" cy="532.3" r="12"/><text x="253.4" y="536.6">22</text><title>22. T-FLAT SASAZUKA 406（幡ヶ谷 2 丁目）｜步行约30分钟到西門</title></g><g class="mk c-apt" data-id="ION303" tabindex="0" role="button" aria-label="23 ION Shibuya Honmachi 303（本町 4 丁目）"><circle cx="404.6" cy="309.2" r="12"/><text x="404.6" y="313.5">23</text><title>23. ION Shibuya Honmachi 303（本町 4 丁目）｜步行约30分钟到参宮橋門</title></g><g class="mk c-apt" data-id="LM157343" tabindex="0" role="button" aria-label="24 LiVEMAX 京王代田桥/笹塚（世田谷区大原，需付满 30 天）"><circle cx="105.2" cy="674.7" r="12"/><text x="105.2" y="679.0">24</text><title>24. LiVEMAX 京王代田桥/笹塚（世田谷区大原，需付满 30 天）｜步行约36分钟到西門</title></g><g class="mk c-hotel est" data-id="TOYOKO" tabindex="0" role="button" aria-label="25 东横 INN 新宿歌舞伎町（连锁商务酒店）"><circle cx="846.7" cy="54.0" r="12"/><text x="846.7" y="58.3">25</text><title>25. 东横 INN 新宿歌舞伎町（连锁商务酒店）｜步行约46分钟到参宮橋門</title></g></svg></div>
+      <p class="sub">菱形 = 公园入口，小方块 = 车站。点编号可跳到对应房源。重叠的点已错开，细线指向真实位置。</p>
+    </div>
+    <div class="panel">
+      <h3>价格和距离怎么取舍</h3>
+      <p class="sub">横轴：步行到公园最近入口的分钟数；纵轴：19 晚总价。越靠左下越划算。</p>
+      <div class="scroll-x"><svg class="scatter" viewBox="0 0 720 440" role="img" aria-label="步行时间与19晚总价散点图"><line class="grid" x1="64" y1="396.0" x2="702" y2="396.0"/><text class="ytick" x="56" y="400.0">5万</text><line class="grid" x1="64" y1="333.0" x2="702" y2="333.0"/><text class="ytick" x="56" y="337.0">10万</text><line class="grid" x1="64" y1="270.0" x2="702" y2="270.0"/><text class="ytick" x="56" y="274.0">15万</text><line class="grid" x1="64" y1="207.0" x2="702" y2="207.0"/><text class="ytick" x="56" y="211.0">20万</text><line class="grid" x1="64" y1="144.0" x2="702" y2="144.0"/><text class="ytick" x="56" y="148.0">25万</text><line class="grid" x1="64" y1="81.0" x2="702" y2="81.0"/><text class="ytick" x="56" y="85.0">30万</text><line class="grid" x1="64" y1="18.0" x2="702" y2="18.0"/><text class="ytick" x="56" y="22.0">35万</text><text class="xtick" x="64.0" y="414">0</text><text class="xtick" x="127.8" y="414">5</text><text class="xtick" x="191.6" y="414">10</text><text class="xtick" x="255.4" y="414">15</text><text class="xtick" x="319.2" y="414">20</text><text class="xtick" x="383.0" y="414">25</text><text class="xtick" x="446.8" y="414">30</text><text class="xtick" x="510.6" y="414">35</text><text class="xtick" x="574.4" y="414">40</text><text class="xtick" x="638.2" y="414">45</text><text class="xtick" x="702.0" y="414">50</text><text class="axis-t" x="702" y="434">步行到公园最近入口（分钟）→</text><text class="axis-t" x="8" y="14" text-anchor="start">19 晚总价（日元）</text><g class="sd c-hotel est" data-id="OLY" tabindex="0"><circle cx="102.3" cy="76.0" r="11"/><text x="102.3" y="80.3">1</text><title>1. 国立奥林匹克纪念青少年综合中心（オリセン）｜19晚 ¥304,000（估算）｜步行3分</title></g><g class="sd c-apt" data-id="LM46639" tabindex="0"><circle cx="242.6" cy="127.8" r="11"/><text x="242.6" y="132.1">2</text><title>2. LiVEMAX 涩谷代代木公园（神山町，需付满 30 天）｜19晚 ¥262,850｜步行14分</title></g><g class="sd c-apt" data-id="A8" tabindex="0"><circle cx="255.4" cy="52.2" r="11"/><text x="255.4" y="56.5">3</text><title>3. Yoyogi House（参宮橋站附近）｜19晚 ¥322,852｜步行15分</title></g><g class="sd c-apt" data-id="A1" tabindex="0"><circle cx="255.4" cy="167.2" r="11"/><text x="255.4" y="171.5">4</text><title>4. 初台站 3 分钟 · 新开 1 室公寓｜19晚 ¥231,609｜步行15分</title></g><g class="sd c-apt" data-id="YT301" tabindex="0"><circle cx="255.4" cy="174.6" r="11"/><text x="255.4" y="178.9">5</text><title>5. Yoyogi Tour 301（初台 2 丁目，可分床）｜19晚 ¥225,747｜步行15分</title></g><g class="sd c-apt" data-id="SK501" tabindex="0"><circle cx="255.4" cy="235.6" r="11"/><text x="255.4" y="239.9">6</text><title>6. S-K MANSION 501（初台 2 丁目）｜19晚 ¥177,327｜步行15分</title></g><g class="sd c-apt" data-id="LM49018" tabindex="0"><circle cx="306.4" cy="260.9" r="11"/><text x="306.4" y="265.2">7</text><title>7. LiVEMAX 代々木上原站前（大山町，需付满 30 天）｜19晚 ¥157,200｜步行19分</title></g><g class="sd c-apt" data-id="LM259059" tabindex="0"><circle cx="319.2" cy="159.8" r="11"/><text x="319.2" y="164.1">8</text><title>8. LiVEMAX 初台 EAST 西参道塔（代々木 4 丁目，需付满 30 天）｜19晚 ¥237,450｜步行20分</title></g><g class="sd c-hotel est" data-id="SAKURA" tabindex="0"><circle cx="332.0" cy="76.0" r="11"/><text x="332.0" y="80.3">9</text><title>9. 幡谷樱花酒店 Sakura Hotel Hatagaya｜19晚 ¥304,000（估算）｜步行21分</title></g><g class="sd c-room" data-id="B1" tabindex="0"><circle cx="344.7" cy="311.6" r="11"/><text x="344.7" y="315.9">10</text><title>10. Takobeya（本町 1-25-1）｜19晚 ¥116,960｜步行22分</title></g><g class="sd c-apt" data-id="A11" tabindex="0"><circle cx="344.7" cy="52.9" r="11"/><text x="344.7" y="57.2">11</text><title>11. Shibuya Night（神泉站附近）｜19晚 ¥322,305｜步行22分</title></g><g class="sd c-apt" data-id="A2" tabindex="0"><circle cx="357.5" cy="195.9" r="11"/><text x="357.5" y="200.2">12</text><title>12. 初台 · Loft 公寓（含沙发床）｜19晚 ¥208,791｜步行23分</title></g><g class="sd c-room" data-id="A15" tabindex="0"><circle cx="370.2" cy="300.6" r="11"/><text x="370.2" y="304.9">13</text><title>13. 幡ヶ谷 · 12 间单人房小旅舍（No.12）｜19晚 ¥125,697｜步行24分</title></g><g class="sd c-apt" data-id="LV102" tabindex="0"><circle cx="395.8" cy="261.4" r="11"/><text x="395.8" y="265.7">14</text><title>14. LaVie Hatsudai 102（本町 2 丁目，2023 年新楼）｜19晚 ¥156,812｜步行26分</title></g><g class="sd c-room" data-id="B2" tabindex="0"><circle cx="395.8" cy="275.4" r="11"/><text x="395.8" y="279.7">15</text><title>15. 新宿東京暖房（本町 6 丁目）｜19晚 ¥145,692｜步行26分</title></g><g class="sd c-apt" data-id="JING" tabindex="0"><circle cx="395.8" cy="216.9" r="11"/><text x="395.8" y="221.2">16</text><title>16. Shibuya SG House / JING HOUSE（幡ヶ谷 1-20-1）｜19晚 ¥192,150｜步行26分</title></g><g class="sd c-apt" data-id="B4" tabindex="0"><circle cx="408.5" cy="212.7" r="11"/><text x="408.5" y="217.0">17</text><title>17. Bamboo Room 105（本町）｜19晚 ¥195,480｜步行27分</title></g><g class="sd c-apt" data-id="A4" tabindex="0"><circle cx="421.3" cy="204.4" r="11"/><text x="421.3" y="208.7">18</text><title>18. Style Wood Nishi-Shinjuku（本町）｜19晚 ¥202,049｜步行28分</title></g><g class="sd c-apt" data-id="A3" tabindex="0"><circle cx="421.3" cy="225.5" r="11"/><text x="421.3" y="229.8">19</text><title>19. 初台/本町 · 两张单人床公寓（限 2 人）｜19晚 ¥185,347｜步行28分</title></g><g class="sd c-apt" data-id="LIV102" tabindex="0"><circle cx="434.0" cy="186.6" r="11"/><text x="434.0" y="190.9">20</text><title>20. Livion III 102（幡ヶ谷 3 丁目，33.7㎡）｜19晚 ¥216,185｜步行29分</title></g><g class="sd c-apt" data-id="FL204" tabindex="0"><circle cx="446.8" cy="219.9" r="11"/><text x="446.8" y="224.2">21</text><title>21. FL Residence 204（本町 4 丁目）｜19晚 ¥189,786｜步行30分</title></g><g class="sd c-apt" data-id="TF406" tabindex="0"><circle cx="446.8" cy="257.4" r="11"/><text x="446.8" y="261.7">22</text><title>22. T-FLAT SASAZUKA 406（幡ヶ谷 2 丁目）｜19晚 ¥159,998｜步行30分</title></g><g class="sd c-apt" data-id="ION303" tabindex="0"><circle cx="446.8" cy="252.2" r="11"/><text x="446.8" y="256.5">23</text><title>23. ION Shibuya Honmachi 303（本町 4 丁目）｜19晚 ¥164,117｜步行30分</title></g><g class="sd c-apt" data-id="LM157343" tabindex="0"><circle cx="523.4" cy="309.7" r="11"/><text x="523.4" y="314.0">24</text><title>24. LiVEMAX 京王代田桥/笹塚（世田谷区大原，需付满 30 天）｜19晚 ¥118,500｜步行36分</title></g><g class="sd c-hotel est" data-id="TOYOKO" tabindex="0"><circle cx="651.0" cy="135.8" r="11"/><text x="651.0" y="140.1">25</text><title>25. 东横 INN 新宿歌舞伎町（连锁商务酒店）｜19晚 ¥256,500（估算）｜步行46分</title></g></svg></div>
+      <p class="sub">左下那一团（步行 15–30 分钟、19 晚 ¥15–20 万）就是初台、本町、幡ヶ谷的公寓。再往左走近一点，价格明显上去；最右下的 #24 便宜但远，还要签满 30 天。</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-list" style="display:grid; gap:14px;">
+    <div class="list-head">
+      <h2 id="h-list">全部房源（25）</h2>
+      <div class="controls" role="group" aria-label="筛选和排序">
+        <button type="button" class="chip on" data-f="all" id="f-all">全部（25）</button><button type="button" class="chip" data-f="apt" id="f-apt">整套公寓 / 民宿（19）</button><button type="button" class="chip" data-f="hotel" id="f-hotel">酒店 / 公共宿舍（3）</button><button type="button" class="chip" data-f="room" id="f-room">单间 · 共用卫浴（3）</button>
+        <span class="sep" aria-hidden="true"></span>
+        <button type="button" class="chip on" data-sort="walk" id="s-walk">按距离</button>
+        <button type="button" class="chip" data-sort="price" id="s-price">按总价</button>
+      </div>
+    </div>
+    <div class="colhead" aria-hidden="true"><span>#</span><span>房源</span><span>到公园</span><span>19 晚总价</span><span>房型 / 设施 / 评分</span><span>预订</span></div>
+    <div id="list">
+<article class="row c-hotel est" id="r-OLY" data-id="OLY" data-cat="hotel" data-walk="198" data-price="304000">
+  <div class="no"><span>1</span></div>
+  <div class="main">
+    <h3>国立奥林匹克纪念青少年综合中心（オリセン）</h3>
+    <p class="orig">国立オリンピック記念青少年総合センター · 个人宿泊</p>
+    <p class="where">酒店 / 公共宿舍 · 官网表单 · 渋谷区代々木神園町 3-1，公园西北角对面</p>
+    <div class="tags"><span class="tag pick">离公园最近</span><span class="tag warn">最多连住10晚</span><span class="tag warn">12/7 休馆</span></div>
+    <p class="note">就在公园西北角，走到参宮橋門 3 分钟。大人和孩子可以同住一间双人间。限制：① 原则上最多连住 10 晚；② 12/7（周一）休馆，当晚不能住，19 晚至少要拆成两段；③ 官网 12 月空房表里 B 栋 12/8–9、12/12、12/19–20 显示「－」订不了，比较现实的是只住一段，例如 12/13 入住、12/19 退房的 6 晚；④ 不能做饭，房间里禁止饮食，吃饭靠园内食堂、咖啡店和 Lawson。只收现金，15:00–22:00 入住，10:00 前退房，无门禁。18 岁以下要交「宿泊予約依頼書」（向中心索取），非日本居民要交护照复印件。</p>
+  </div>
+  <div class="dist"><b>3 分钟</b><span class="sub">步行 0.2 公里到参宮橋門<br>到 B 区篮球场约 13 分钟</span></div>
+  <div class="price"><b class="tot est">每晚 ¥16,000（2 人）</b><span class="sub">个人只能订带卫浴的 B 栋双人间或 D 栋单人间，每人 ¥8,000，孩子同价。原则最多 10 晚</span></div>
+  <div class="room"><span class="beds">B 栋双人间（2 张单人床，带卫浴）</span><div class="facs"><span class="fac">独立卫浴</span><span class="fac">投币洗衣 7–22 点</span><span class="fac">楼内 Lawson</span><span class="fac">食堂</span></div><span class="sub">公立设施，无平台评分</span></div>
+  <div class="links"><a href="https://nyc.niye.go.jp/reserve/individual" target="_blank" rel="noopener">个人宿泊说明</a> <a href="https://nyc.niye.go.jp/wp-content/uploads/2026/07/nyc-price20260707_kojin.pdf" target="_blank" rel="noopener">个人价格表</a> <a href="https://yoyaku.nyc.niye.go.jp/users/syukuhaku.html" target="_blank" rel="noopener">空房表</a></div>
+</article>
+<article class="row c-apt" id="r-LM46639" data-id="LM46639" data-cat="apt" data-walk="1072" data-price="262850">
+  <div class="no"><span>2</span></div>
+  <div class="main">
+    <h3>LiVEMAX 涩谷代代木公园（神山町，需付满 30 天）</h3>
+    <p class="orig">LiveMax 月租 · #46639 · 神山町 25-16</p>
+    <p class="where">整套公寓 / 民宿 · LiveMax 官网 · 代々木公園站步行 10 分钟，公园 B 区西南侧</p>
+    <div class="tags"><span class="tag pick">整套里离公园最近</span><span class="tag warn">需付满30天</span><span class="tag warn">11月内办完手续</span></div>
+    <p class="note">按 10–12 月入住 6 折活动：¥7,050/天 × 30 天 = ¥211,500，加初期费用 ¥35,000、孩子加收 ¥16,350。要在 11 月内办完手续并一次付清；银行转账再便宜约 ¥1.6 万。没写有洗衣机。LiveMax 月租公寓最少签 30 天，住 19 晚也要按 30 天付；总价已含孩子加收的 5% 房租。接受外国人、免担保人（推荐另买 ¥40,000 的担保方案，未计入），可打 0120-713-860 用中文询价。</p>
+  </div>
+  <div class="dist"><b>14 分钟</b><span class="sub">步行 1.1 公里到西門<br>到 B 区篮球场约 15 分钟</span></div>
+  <div class="price"><b class="tot">¥262,850</b><span class="sub">每晚 ¥13,834 · 约人民币 11,100 元</span></div>
+  <div class="room"><span class="beds">21.7㎡ 1K · 日式被褥 · 限 2 人</span><div class="facs"><span class="fac">燃气灶厨房</span></div><span class="sub">月租公寓，无评分</span></div>
+  <div class="links"><a href="https://www.weekly-monthly.net/tokyo/search/shousai/46639/" target="_blank" rel="noopener">LiveMax 房源页</a></div>
+</article>
+<article class="row c-apt" id="r-A8" data-id="A8" data-cat="apt" data-walk="1129" data-price="322852">
+  <div class="no"><span>3</span></div>
+  <div class="main">
+    <h3>Yoyogi House（参宮橋站附近）</h3>
+    <p class="orig">Airbnb · Yoyogi House</p>
+    <p class="where">整套公寓 / 民宿 · Airbnb · 代々木4丁目一带，近小田急参宮橋站</p>
+    <div class="tags"></div>
+    <p class="note">原价 ¥366,700，长住自动打折后如左。两张单人床，大人孩子各睡一张。订后 24 小时内可免费取消。</p>
+  </div>
+  <div class="dist"><b>15 分钟</b><span class="sub">步行 1.1 公里到参宮橋門<br>到 B 区篮球场约 25 分钟</span></div>
+  <div class="price"><b class="tot">¥322,852</b><span class="sub">每晚 ¥16,992 · 约人民币 13,700 元</span></div>
+  <div class="room"><span class="beds">2 张单人床 · 限 2 人</span><div class="facs"><span class="fac">厨房</span><span class="fac">洗衣机</span><span class="fac">浴缸</span><span class="fac">自助入住</span></div><span class="sub">4.75（20 条）</span></div>
+  <div class="links"><a href="https://www.airbnb.com/rooms/1492386204192049792?check_in=2026-12-03&amp;check_out=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">Airbnb</a></div>
+</article>
+<article class="row c-apt" id="r-A1" data-id="A1" data-cat="apt" data-walk="1133" data-price="231609">
+  <div class="no"><span>4</span></div>
+  <div class="main">
+    <h3>初台站 3 分钟 · 新开 1 室公寓</h3>
+    <p class="orig">Airbnb · New open / 3 minutes on foot from Hatsudai Station</p>
+    <p class="where">整套公寓 / 民宿 · Airbnb · 初台站附近</p>
+    <div class="tags"></div>
+    <p class="note">和 #6 距离差不多，贵 ¥5.4 万，但是独立 1 室、带烘干和浴缸。床偏小，介意可选 2 张单人床的房源。</p>
+  </div>
+  <div class="dist"><b>15 分钟</b><span class="sub">步行 1.1 公里到参宮橋門<br>到 B 区篮球场约 25 分钟</span></div>
+  <div class="price"><b class="tot">¥231,609</b><span class="sub">每晚 ¥12,190 · 约人民币 9,800 元</span></div>
+  <div class="room"><span class="beds">1 张小双人床（约 120cm，两人略挤）· 限 2 人</span><div class="facs"><span class="fac">厨房</span><span class="fac">洗衣机</span><span class="fac">烘干</span><span class="fac">浴缸</span><span class="fac">自助入住</span></div><span class="sub">4.7（10 条）</span></div>
+  <div class="links"><a href="https://www.airbnb.com/rooms/1712741055948407290?check_in=2026-12-03&amp;check_out=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">Airbnb</a></div>
+</article>
+<article class="row c-apt" id="r-YT301" data-id="YT301" data-cat="apt" data-walk="1155" data-price="225747">
+  <div class="no"><span>5</span></div>
+  <div class="main">
+    <h3>Yoyogi Tour 301（初台 2 丁目，可分床）</h3>
+    <p class="orig">sumyca stay · Yoyogi Tour 301</p>
+    <p class="where">整套公寓 / 民宿 · sumyca stay 官网 · 初台站步行 10 分钟</p>
+    <div class="tags"></div>
+    <p class="note">¥216,847 + 清洁费 ¥8,900。带客厅，大人孩子各睡各的。sumyca 的取消规则：入住前 30 天内取消扣 20%（现在订就已在这个区间），15 天内扣 50%，8 天内扣 80%，7 天内全扣。官网直接订，支持中文，刷卡付款，16:00 自助入住、10:00 退房。</p>
+  </div>
+  <div class="dist"><b>15 分钟</b><span class="sub">步行 1.2 公里到参宮橋門<br>到 B 区篮球场约 25 分钟</span></div>
+  <div class="price"><b class="tot">¥225,747</b><span class="sub">每晚 ¥11,881 · 约人民币 9,600 元</span></div>
+  <div class="room"><span class="beds">26㎡ 1LDK · 1 张单人床 + 1 套日式被褥 · 最多 3 人</span><div class="facs"><span class="fac">燃气灶厨房</span><span class="fac">洗衣机</span></div><span class="sub">运营商自营，无评分</span></div>
+  <div class="links"><a href="https://stay.sumyca.com/en/properties/99a0adec-5d23-43ef-9b20-565826e469fd/rooms/de9b221f-40cd-4b28-92fb-f95e95ea3df0?checkIn=2026-12-03&amp;checkOut=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">sumyca 订房页</a></div>
+</article>
+<article class="row c-apt" id="r-SK501" data-id="SK501" data-cat="apt" data-walk="1199" data-price="177327">
+  <div class="no"><span>6</span></div>
+  <div class="main">
+    <h3>S-K MANSION 501（初台 2 丁目）</h3>
+    <p class="orig">sumyca stay · S-K MANSION 501</p>
+    <p class="where">整套公寓 / 民宿 · sumyca stay 官网 · 初台站步行 8 分钟，山手通り西侧</p>
+    <div class="tags"><span class="tag pick">近 + 便宜</span></div>
+    <p class="note">¥170,627 + 清洁费 ¥6,700。同楼 103 号是 20.9㎡、双人床加一套日式被褥，¥197,666，可以分开睡。sumyca 的取消规则：入住前 30 天内取消扣 20%（现在订就已在这个区间），15 天内扣 50%，8 天内扣 80%，7 天内全扣。官网直接订，支持中文，刷卡付款，16:00 自助入住、10:00 退房。</p>
+  </div>
+  <div class="dist"><b>15 分钟</b><span class="sub">步行 1.2 公里到参宮橋門<br>到 B 区篮球场约 26 分钟</span></div>
+  <div class="price"><b class="tot">¥177,327</b><span class="sub">每晚 ¥9,333 · 约人民币 7,500 元</span></div>
+  <div class="room"><span class="beds">17.9㎡ 单间 · 1 张双人床 · 限 2 人</span><div class="facs"><span class="fac">燃气灶厨房</span><span class="fac">洗衣机</span></div><span class="sub">运营商自营，无评分</span></div>
+  <div class="links"><a href="https://stay.sumyca.com/en/properties/705a37bc-b75b-47a3-8b1e-da10f38db8b9/rooms/1fd4b182-7194-4353-b7a7-dfbd247d4c86?checkIn=2026-12-03&amp;checkOut=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">501 订房页</a> <a href="https://stay.sumyca.com/en/properties/705a37bc-b75b-47a3-8b1e-da10f38db8b9/rooms/0ffc15f0-d75c-4b45-96da-a67ec00b9d49?checkIn=2026-12-03&amp;checkOut=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">103 订房页</a></div>
+</article>
+<article class="row c-apt" id="r-LM49018" data-id="LM49018" data-cat="apt" data-walk="1462" data-price="157200">
+  <div class="no"><span>7</span></div>
+  <div class="main">
+    <h3>LiVEMAX 代々木上原站前（大山町，需付满 30 天）</h3>
+    <p class="orig">LiveMax 月租 · #49018 · 大山町 47-15</p>
+    <p class="where">整套公寓 / 民宿 · LiveMax 官网 · 代々木上原站步行 3 分钟</p>
+    <div class="tags"><span class="tag warn">需付满30天</span><span class="tag warn">价格需书面确认</span></div>
+    <p class="note">页面主推「全包价」¥4,700/天 × 30 天 = ¥141,000，加孩子加收 ¥16,200，合计 ¥157,200；但同一页的价目表写的是 ¥5,250/天，若按这个算再加初期费用是 ¥208,700。一定要先拿书面报价。楼龄 23 年。代々木上原站坐千代田线 1 站就到代々木公园站。LiveMax 月租公寓最少签 30 天，住 19 晚也要按 30 天付；总价已含孩子加收的 5% 房租。接受外国人、免担保人（推荐另买 ¥40,000 的担保方案，未计入），可打 0120-713-860 用中文询价。</p>
+  </div>
+  <div class="dist"><b>19 分钟</b><span class="sub">步行 1.5 公里到参宮橋門<br>到 B 区篮球场约 22 分钟</span></div>
+  <div class="price"><b class="tot">¥157,200</b><span class="sub">每晚 ¥8,274 · 约人民币 6,700 元</span></div>
+  <div class="room"><span class="beds">19.8㎡ 单间 · 限 2 人</span><div class="facs"><span class="fac">厨房</span></div><span class="sub">月租公寓，无评分</span></div>
+  <div class="links"><a href="https://www.weekly-monthly.net/tokyo/search/shousai/49018/" target="_blank" rel="noopener">LiveMax 房源页</a></div>
+</article>
+<article class="row c-apt" id="r-LM259059" data-id="LM259059" data-cat="apt" data-walk="1584" data-price="237450">
+  <div class="no"><span>8</span></div>
+  <div class="main">
+    <h3>LiVEMAX 初台 EAST 西参道塔（代々木 4 丁目，需付满 30 天）</h3>
+    <p class="orig">LiveMax 月租 · #259059 · 代々木 4-30-5</p>
+    <p class="where">整套公寓 / 民宿 · LiveMax 官网 · 初台站步行 5 分钟 / 参宮橋站 9 分钟</p>
+    <div class="tags"><span class="tag warn">需付满30天</span></div>
+    <p class="note">「全包价」¥7,200/天（含房租、清洁、基本套餐）× 30 天 = ¥216,000，加孩子加收 ¥21,450。活动到 2027 年 1 月底，满房即止。LiveMax 月租公寓最少签 30 天，住 19 晚也要按 30 天付；总价已含孩子加收的 5% 房租。接受外国人、免担保人（推荐另买 ¥40,000 的担保方案，未计入），可打 0120-713-860 用中文询价。</p>
+  </div>
+  <div class="dist"><b>20 分钟</b><span class="sub">步行 1.6 公里到参宮橋門<br>到 B 区篮球场约 30 分钟</span></div>
+  <div class="price"><b class="tot">¥237,450</b><span class="sub">每晚 ¥12,497 · 约人民币 10,100 元</span></div>
+  <div class="room"><span class="beds">29.5㎡ 1K · 限 2 人</span><div class="facs"><span class="fac">厨房</span></div><span class="sub">月租公寓，无评分</span></div>
+  <div class="links"><a href="https://www.weekly-monthly.net/tokyo/search/shousai/259059/" target="_blank" rel="noopener">LiveMax 房源页</a></div>
+</article>
+<article class="row c-hotel est" id="r-SAKURA" data-id="SAKURA" data-cat="hotel" data-walk="1671" data-price="304000">
+  <div class="no"><span>9</span></div>
+  <div class="main">
+    <h3>幡谷樱花酒店 Sakura Hotel Hatagaya</h3>
+    <p class="orig">サクラホテル幡ヶ谷 · 渋谷区幡ヶ谷1-32-3</p>
+    <p class="where">酒店 / 公共宿舍 · 官网 / Booking · 幡ヶ谷站南口步行 2 分钟</p>
+    <div class="tags"><span class="tag warn">无法连住19晚</span></div>
+    <p class="note">前台有人会中文（Booking 点评提到）。房源零散：乐天上 12/5（周六）全满，双床间 12/7–11 满，双人间 12/13–18 满；官网按 1 大 1 小查询也显示没房，Booking 显示整段无空房。要住的话至少换 1–2 次房。没有公开的长住价，可以打 03-3469-5211 问。估算总价按 ¥16,000 × 19。</p>
+  </div>
+  <div class="dist"><b>21 分钟</b><span class="sub">步行 1.7 公里到参宮橋門<br>到 B 区篮球场约 29 分钟</span></div>
+  <div class="price"><b class="tot est">每晚约 ¥16,000–18,500（2 人）</b><span class="sub">乐天 1 大 1 小：双人间 ¥16,000（12/7–11），双床间 ¥18,500（12/13–18）。7 岁以上按成人收费</span></div>
+  <div class="room"><span class="beds">双人间 11㎡（1 张双人床）/ 双床间（2 张床）</span><div class="facs"><span class="fac">独立卫浴</span><span class="fac">24h 投币洗衣</span><span class="fac">咖啡厅</span></div><span class="sub">Booking 7.8（1,961 条）</span></div>
+  <div class="links"><a href="https://sakura-hotel.co.jp/hatagaya" target="_blank" rel="noopener">官网</a> <a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/17908" target="_blank" rel="noopener">乐天</a> <a href="https://www.booking.com/hotel/jp/sakura-hatagaya.zh-cn.html?checkin=2026-12-03&amp;checkout=2026-12-22&amp;group_adults=1&amp;group_children=1&amp;age=10" target="_blank" rel="noopener">Booking</a></div>
+</article>
+<article class="row c-room" id="r-B1" data-id="B1" data-cat="room" data-walk="1745" data-price="116960">
+  <div class="no"><span>10</span></div>
+  <div class="main">
+    <h3>Takobeya（本町 1-25-1）</h3>
+    <p class="orig">Booking · Takobeya · 标准双人间（共用浴室）</p>
+    <p class="where">单间 · 共用卫浴 · Booking · 幡ヶ谷站与初台站之间</p>
+    <div class="tags"><span class="tag pick">全场最便宜</span></div>
+    <p class="note">¥113,960（原价 ¥162,800，限时 7 折）+ 税费 ¥3,000，不可退款。房间独立，淋浴和厕所共用，没写有厨房和洗衣机。评价只有 6 条。</p>
+  </div>
+  <div class="dist"><b>22 分钟</b><span class="sub">步行 1.7 公里到参宮橋門<br>到 B 区篮球场约 32 分钟</span></div>
+  <div class="price"><b class="tot">¥116,960</b><span class="sub">每晚 ¥6,156 · 约人民币 5,000 元</span></div>
+  <div class="room"><span class="beds">1 张双人床，大人孩子同睡</span><div class="facs"><span class="fac">共用浴室</span></div><span class="sub">Booking 6.8（6 条）</span></div>
+  <div class="links"><a href="https://www.booking.com/hotel/jp/takobeya-no1.zh-cn.html?checkin=2026-12-03&amp;checkout=2026-12-22&amp;group_adults=1&amp;group_children=1&amp;age=10" target="_blank" rel="noopener">Booking</a></div>
+</article>
+<article class="row c-apt" id="r-A11" data-id="A11" data-cat="apt" data-walk="1750" data-price="322305">
+  <div class="no"><span>11</span></div>
+  <div class="main">
+    <h3>Shibuya Night（神泉站附近）</h3>
+    <p class="orig">Airbnb · Shibuya Night (14 min walk to Shibuya Crossing)</p>
+    <p class="where">整套公寓 / 民宿 · Airbnb · 神泉 / 松濤一带，在公园南边</p>
+    <div class="tags"></div>
+    <p class="note">离公园 B 区（NHK、篮球场一侧）比较近，到篮球场约 23 分钟。</p>
+  </div>
+  <div class="dist"><b>22 分钟</b><span class="sub">步行 1.8 公里到渋谷門<br>到 B 区篮球场约 23 分钟</span></div>
+  <div class="price"><b class="tot">¥322,305</b><span class="sub">每晚 ¥16,963 · 约人民币 13,700 元</span></div>
+  <div class="room"><span class="beds">1 室 · 1 张双人床</span><div class="facs"><span class="fac">厨房</span><span class="fac">洗衣机</span></div><span class="sub">暂无评分</span></div>
+  <div class="links"><a href="https://www.airbnb.com/rooms/1756530499425604596?check_in=2026-12-03&amp;check_out=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">Airbnb</a></div>
+</article>
+<article class="row c-apt" id="r-A2" data-id="A2" data-cat="apt" data-walk="1763" data-price="208791">
+  <div class="no"><span>12</span></div>
+  <div class="main">
+    <h3>初台 · Loft 公寓（含沙发床）</h3>
+    <p class="orig">Airbnb · 1stop to Shinjuku / Direct bus to Shibuya / Quiet area</p>
+    <p class="where">整套公寓 / 民宿 · Airbnb · 初台站西北侧</p>
+    <div class="tags"></div>
+    <p class="note">原价 ¥264,812，长住折扣后如左。房东写有直达涩谷的公交。</p>
+  </div>
+  <div class="dist"><b>23 分钟</b><span class="sub">步行 1.8 公里到参宮橋門<br>到 B 区篮球场约 32 分钟</span></div>
+  <div class="price"><b class="tot">¥208,791</b><span class="sub">每晚 ¥10,989 · 约人民币 8,800 元</span></div>
+  <div class="room"><span class="beds">1 室 · 沙发床 · 最多 3 人</span><div class="facs"><span class="fac">厨房</span><span class="fac">洗衣机</span><span class="fac">浴缸</span><span class="fac">自助入住</span></div><span class="sub">4.67（55 条）</span></div>
+  <div class="links"><a href="https://www.airbnb.com/rooms/1167959244313831249?check_in=2026-12-03&amp;check_out=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">Airbnb</a></div>
+</article>
+<article class="row c-room" id="r-A15" data-id="A15" data-cat="room" data-walk="1870" data-price="125697">
+  <div class="no"><span>13</span></div>
+  <div class="main">
+    <h3>幡ヶ谷 · 12 间单人房小旅舍（No.12）</h3>
+    <p class="orig">Airbnb · No.12 10 min to Shinjuku! 12 private room hostel</p>
+    <p class="where">单间 · 共用卫浴 · Airbnb · 幡ヶ谷站步行 7 分钟</p>
+    <div class="tags"><span class="tag pick">单间最便宜之一</span></div>
+    <p class="note">房间独立带锁，但 2 个淋浴、2 个厕所和厨房与其他房客共用。孩子按人数收费。登记号 M130004369。</p>
+  </div>
+  <div class="dist"><b>24 分钟</b><span class="sub">步行 1.9 公里到参宮橋門<br>到 B 区篮球场约 34 分钟</span></div>
+  <div class="price"><b class="tot">¥125,697</b><span class="sub">每晚 ¥6,616 · 约人民币 5,300 元</span></div>
+  <div class="room"><span class="beds">带锁单间 · 1 张双人床 + 2 套日式被褥</span><div class="facs"><span class="fac">共用淋浴/厕所</span><span class="fac">共用厨房</span><span class="fac">洗衣机（无烘干）</span></div><span class="sub">4.29（101 条）</span></div>
+  <div class="links"><a href="https://www.airbnb.com/rooms/20346035?check_in=2026-12-03&amp;check_out=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">Airbnb</a></div>
+</article>
+<article class="row c-apt" id="r-LV102" data-id="LV102" data-cat="apt" data-walk="2046" data-price="156812">
+  <div class="no"><span>14</span></div>
+  <div class="main">
+    <h3>LaVie Hatsudai 102（本町 2 丁目，2023 年新楼）</h3>
+    <p class="orig">sumyca stay · LaVie Hatsudai 102</p>
+    <p class="where">整套公寓 / 民宿 · sumyca stay 官网 · 初台站步行 8 分钟</p>
+    <div class="tags"><span class="tag pick">能连住19晚里最便宜</span></div>
+    <p class="note">¥150,112 + 清洁费 ¥6,700，我在官网按 1 大 1 小核对过总价。床只有一张双人床，大人孩子同睡。sumyca 的取消规则：入住前 30 天内取消扣 20%（现在订就已在这个区间），15 天内扣 50%，8 天内扣 80%，7 天内全扣。官网直接订，支持中文，刷卡付款，16:00 自助入住、10:00 退房。</p>
+  </div>
+  <div class="dist"><b>26 分钟</b><span class="sub">步行 2.0 公里到参宮橋門<br>到 B 区篮球场约 36 分钟</span></div>
+  <div class="price"><b class="tot">¥156,812</b><span class="sub">每晚 ¥8,253 · 约人民币 6,600 元</span></div>
+  <div class="room"><span class="beds">24.5㎡ 1DK · 1 张双人床 · 限 2 人</span><div class="facs"><span class="fac">IH 厨房</span><span class="fac">洗衣机</span><span class="fac">微波炉</span><span class="fac">电饭煲</span></div><span class="sub">运营商自营，无评分</span></div>
+  <div class="links"><a href="https://stay.sumyca.com/en/properties/5a9b1c92-ccdb-4d8d-9a17-2e45b1ed3da6/rooms/44ffc09d-7fb6-4690-95a7-6be18cc0066b?checkIn=2026-12-03&amp;checkOut=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">sumyca 订房页</a></div>
+</article>
+<article class="row c-room" id="r-B2" data-id="B2" data-cat="room" data-walk="2048" data-price="145692">
+  <div class="no"><span>15</span></div>
+  <div class="main">
+    <h3>新宿東京暖房（本町 6 丁目）</h3>
+    <p class="orig">Booking · 双床间（共用卫生间）</p>
+    <p class="where">单间 · 共用卫浴 · Booking · 幡ヶ谷站北侧</p>
+    <div class="tags"><span class="tag warn">评分很低</span></div>
+    <p class="note">¥145,692 已含税，不可退款。便宜，但 68 条评价只有 4.4 分，不建议带孩子住。</p>
+  </div>
+  <div class="dist"><b>26 分钟</b><span class="sub">步行 2.0 公里到参宮橋門<br>到 B 区篮球场约 36 分钟</span></div>
+  <div class="price"><b class="tot">¥145,692</b><span class="sub">每晚 ¥7,668 · 约人民币 6,200 元</span></div>
+  <div class="room"><span class="beds">2 张单人床</span><div class="facs"><span class="fac">共用卫生间</span></div><span class="sub">Booking 4.4（68 条）</span></div>
+  <div class="links"><a href="https://www.booking.com/hotel/jp/xin-su-dong-jing-nuan-fang.zh-cn.html?checkin=2026-12-03&amp;checkout=2026-12-22&amp;group_adults=1&amp;group_children=1&amp;age=10" target="_blank" rel="noopener">Booking</a></div>
+</article>
+<article class="row c-apt" id="r-JING" data-id="JING" data-cat="apt" data-walk="2052" data-price="192150">
+  <div class="no"><span>16</span></div>
+  <div class="main">
+    <h3>Shibuya SG House / JING HOUSE（幡ヶ谷 1-20-1）</h3>
+    <p class="orig">Booking · 豪华三人间（1 双人床 + 1 日式床垫）</p>
+    <p class="where">整套公寓 / 民宿 · Booking / Airbnb · 幡ヶ谷站附近，同一栋楼多种房型</p>
+    <div class="tags"><span class="tag pick">性价比</span></div>
+    <p class="note">¥192,150 已含税，不可退款。同楼还有：20㎡ 带厨房公寓 ¥264,597（Booking，可免费取消）；Airbnb 双人床房 ¥224,413（4.22 分）。</p>
+  </div>
+  <div class="dist"><b>26 分钟</b><span class="sub">步行 2.1 公里到参宮橋門<br>到 B 区篮球场约 36 分钟</span></div>
+  <div class="price"><b class="tot">¥192,150</b><span class="sub">每晚 ¥10,113 · 约人民币 8,100 元</span></div>
+  <div class="room"><span class="beds">30㎡ · 1 张双人床 + 1 张日式床垫</span><div class="facs"><span class="fac">独立卫浴</span><span class="fac">浴缸</span><span class="fac">独立厨房</span><span class="fac">洗衣</span></div><span class="sub">Booking 7.5（123 条）</span></div>
+  <div class="links"><a href="https://www.booking.com/hotel/jp/roppongi-luxury-house-free-pocket-wifi.zh-cn.html?checkin=2026-12-03&amp;checkout=2026-12-22&amp;group_adults=1&amp;group_children=1&amp;age=10" target="_blank" rel="noopener">Booking 三人间</a> <a href="https://www.booking.com/hotel/jp/jing-houseshibui-gu-daburubetudo-xin-su-shibui-gu-yi-jin.zh-cn.html?checkin=2026-12-03&amp;checkout=2026-12-22&amp;group_adults=1&amp;group_children=1&amp;age=10" target="_blank" rel="noopener">Booking 20㎡ 公寓</a> <a href="https://www.airbnb.com/rooms/52517613?check_in=2026-12-03&amp;check_out=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">Airbnb</a></div>
+</article>
+<article class="row c-apt" id="r-B4" data-id="B4" data-cat="apt" data-walk="2125" data-price="195480">
+  <div class="no"><span>17</span></div>
+  <div class="main">
+    <h3>Bamboo Room 105（本町）</h3>
+    <p class="orig">Booking · 一卧室公寓 23㎡</p>
+    <p class="where">整套公寓 / 民宿 · Booking · 幡ヶ谷站北侧</p>
+    <div class="tags"></div>
+    <p class="note">¥190,680（原价 ¥272,400，最后一刻 7 折）+ 税费 ¥4,800，不可退款。</p>
+  </div>
+  <div class="dist"><b>27 分钟</b><span class="sub">步行 2.1 公里到参宮橋門<br>到 B 区篮球场约 37 分钟</span></div>
+  <div class="price"><b class="tot">¥195,480</b><span class="sub">每晚 ¥10,288 · 约人民币 8,300 元</span></div>
+  <div class="room"><span class="beds">23㎡ 一卧室 · 1 张双人床</span><div class="facs"><span class="fac">独立卫浴</span><span class="fac">独立厨房</span></div><span class="sub">新房源，暂无评分</span></div>
+  <div class="links"><a href="https://www.booking.com/hotel/jp/bamboo-room-105-easy-access-to-shinjuku-and-shibuya-spacious-room-with-1-double.zh-cn.html?checkin=2026-12-03&amp;checkout=2026-12-22&amp;group_adults=1&amp;group_children=1&amp;age=10" target="_blank" rel="noopener">Booking</a></div>
+</article>
+<article class="row c-apt" id="r-A4" data-id="A4" data-cat="apt" data-walk="2191" data-price="202049">
+  <div class="no"><span>18</span></div>
+  <div class="main">
+    <h3>Style Wood Nishi-Shinjuku（本町）</h3>
+    <p class="orig">Airbnb · Style Wood Nishi-Shinjuku | 10-minute walk to Hatsudai Station</p>
+    <p class="where">整套公寓 / 民宿 · Airbnb · 初台站步行 10 分钟</p>
+    <div class="tags"></div>
+    <p class="note">原价 ¥229,700，周租折扣后如左。12 月 2 日前可免费取消，最灵活。评价有 1,000 多条，上下铺孩子会喜欢。</p>
+  </div>
+  <div class="dist"><b>28 分钟</b><span class="sub">步行 2.2 公里到参宮橋門<br>到 B 区篮球场约 38 分钟</span></div>
+  <div class="price"><b class="tot">¥202,049</b><span class="sub">每晚 ¥10,634 · 约人民币 8,600 元</span></div>
+  <div class="room"><span class="beds">上下铺 · 最多 3 人</span><div class="facs"><span class="fac">厨房</span><span class="fac">洗衣机</span><span class="fac">12/2 前免费取消</span></div><span class="sub">4.46（1,127 条）</span></div>
+  <div class="links"><a href="https://www.airbnb.com/rooms/52709893?check_in=2026-12-03&amp;check_out=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">Airbnb</a></div>
+</article>
+<article class="row c-apt" id="r-A3" data-id="A3" data-cat="apt" data-walk="2201" data-price="185347">
+  <div class="no"><span>19</span></div>
+  <div class="main">
+    <h3>初台/本町 · 两张单人床公寓（限 2 人）</h3>
+    <p class="orig">Airbnb · 4 min to Shinjuku Sta. by train / 2 ppl / Wi-fi</p>
+    <p class="where">整套公寓 / 民宿 · Airbnb · 初台站与幡ヶ谷站之间</p>
+    <div class="tags"><span class="tag pick">分床睡里最便宜</span></div>
+    <p class="note">两张单人床的整套里总价最低，评分也高，有洗衣机、烘干机和阳台。需要爬楼梯。订后 24 小时内可免费取消，11 月 26 日前取消可退一部分。登记号 M130039593。</p>
+  </div>
+  <div class="dist"><b>28 分钟</b><span class="sub">步行 2.2 公里到参宮橋門<br>到 B 区篮球场约 38 分钟</span></div>
+  <div class="price"><b class="tot">¥185,347</b><span class="sub">每晚 ¥9,755 · 约人民币 7,900 元</span></div>
+  <div class="room"><span class="beds">1 室 · 2 张单人床 · 限 2 人</span><div class="facs"><span class="fac">厨房</span><span class="fac">洗衣机</span><span class="fac">烘干</span><span class="fac">浴缸</span></div><span class="sub">4.84（74 条）</span></div>
+  <div class="links"><a href="https://www.airbnb.com/rooms/32027326?check_in=2026-12-03&amp;check_out=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">Airbnb</a></div>
+</article>
+<article class="row c-apt" id="r-LIV102" data-id="LIV102" data-cat="apt" data-walk="2277" data-price="216185">
+  <div class="no"><span>20</span></div>
+  <div class="main">
+    <h3>Livion III 102（幡ヶ谷 3 丁目，33.7㎡）</h3>
+    <p class="orig">sumyca stay · Livion III 102</p>
+    <p class="where">整套公寓 / 民宿 · sumyca stay 官网 · 幡ヶ谷站步行 5 分钟</p>
+    <div class="tags"><span class="tag pick">空间最大</span></div>
+    <p class="note">¥206,985 + 清洁费 ¥9,200。所有候选里面积最大，可以分开睡。sumyca 的取消规则：入住前 30 天内取消扣 20%（现在订就已在这个区间），15 天内扣 50%，8 天内扣 80%，7 天内全扣。官网直接订，支持中文，刷卡付款，16:00 自助入住、10:00 退房。</p>
+  </div>
+  <div class="dist"><b>29 分钟</b><span class="sub">步行 2.3 公里到参宮橋門<br>到 B 区篮球场约 39 分钟</span></div>
+  <div class="price"><b class="tot">¥216,185</b><span class="sub">每晚 ¥11,378 · 约人民币 9,200 元</span></div>
+  <div class="room"><span class="beds">33.7㎡ 1K · 1 张双人床 + 2 套日式被褥 · 最多 5 人</span><div class="facs"><span class="fac">厨房</span><span class="fac">洗衣机</span></div><span class="sub">运营商自营，无评分</span></div>
+  <div class="links"><a href="https://stay.sumyca.com/en/properties/4ad18922-1017-42a6-8581-0f44dd57451b/rooms/de42b9eb-85ef-49a4-b48a-e209065df803?checkIn=2026-12-03&amp;checkOut=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">sumyca 订房页</a></div>
+</article>
+<article class="row c-apt" id="r-FL204" data-id="FL204" data-cat="apt" data-walk="2332" data-price="189786">
+  <div class="no"><span>21</span></div>
+  <div class="main">
+    <h3>FL Residence 204（本町 4 丁目）</h3>
+    <p class="orig">sumyca stay · FL Residence Jingu Gyoen IV 204</p>
+    <p class="where">整套公寓 / 民宿 · sumyca stay 官网 · 西新宿五丁目站步行 6 分钟</p>
+    <div class="tags"></div>
+    <p class="note">¥183,086 + 清洁费 ¥6,700。sumyca 的取消规则：入住前 30 天内取消扣 20%（现在订就已在这个区间），15 天内扣 50%，8 天内扣 80%，7 天内全扣。官网直接订，支持中文，刷卡付款，16:00 自助入住、10:00 退房。</p>
+  </div>
+  <div class="dist"><b>30 分钟</b><span class="sub">步行 2.3 公里到参宮橋門<br>到 B 区篮球场约 40 分钟</span></div>
+  <div class="price"><b class="tot">¥189,786</b><span class="sub">每晚 ¥9,989 · 约人民币 8,000 元</span></div>
+  <div class="room"><span class="beds">21.4㎡ 1K · 1 张双人床 · 限 2 人</span><div class="facs"><span class="fac">厨房</span><span class="fac">洗衣机</span></div><span class="sub">运营商自营，无评分</span></div>
+  <div class="links"><a href="https://stay.sumyca.com/en/properties/e95843dc-a6eb-43c5-a0c5-6c1b49469194/rooms/905ea7bb-4dcf-4587-a042-d75e1c6696e4?checkIn=2026-12-03&amp;checkOut=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">sumyca 订房页</a></div>
+</article>
+<article class="row c-apt" id="r-TF406" data-id="TF406" data-cat="apt" data-walk="2339" data-price="159998">
+  <div class="no"><span>22</span></div>
+  <div class="main">
+    <h3>T-FLAT SASAZUKA 406（幡ヶ谷 2 丁目）</h3>
+    <p class="orig">sumyca stay · T-FLAT SASAZUKA 406</p>
+    <p class="where">整套公寓 / 民宿 · sumyca stay 官网 · 笹塚站步行 6 分钟</p>
+    <div class="tags"></div>
+    <p class="note">¥153,298 + 清洁费 ¥6,700。房间偏小。sumyca 的取消规则：入住前 30 天内取消扣 20%（现在订就已在这个区间），15 天内扣 50%，8 天内扣 80%，7 天内全扣。官网直接订，支持中文，刷卡付款，16:00 自助入住、10:00 退房。</p>
+  </div>
+  <div class="dist"><b>30 分钟</b><span class="sub">步行 2.3 公里到西門<br>到 B 区篮球场约 39 分钟</span></div>
+  <div class="price"><b class="tot">¥159,998</b><span class="sub">每晚 ¥8,421 · 约人民币 6,800 元</span></div>
+  <div class="room"><span class="beds">15.7㎡ 单间 · 1 张双人床 · 限 2 人</span><div class="facs"><span class="fac">厨房</span><span class="fac">洗衣机</span></div><span class="sub">运营商自营，无评分</span></div>
+  <div class="links"><a href="https://stay.sumyca.com/en/properties/fa0f3d8b-0f84-414e-84dc-9b78b6ad835e/rooms/76962e95-91cd-48c6-89a6-950f12293ca5?checkIn=2026-12-03&amp;checkOut=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">sumyca 订房页</a></div>
+</article>
+<article class="row c-apt" id="r-ION303" data-id="ION303" data-cat="apt" data-walk="2391" data-price="164117">
+  <div class="no"><span>23</span></div>
+  <div class="main">
+    <h3>ION Shibuya Honmachi 303（本町 4 丁目）</h3>
+    <p class="orig">sumyca stay · ION Shibuya Honmachi 303</p>
+    <p class="where">整套公寓 / 民宿 · sumyca stay 官网 · 西新宿五丁目站步行 9 分钟</p>
+    <div class="tags"></div>
+    <p class="note">¥157,417 + 清洁费 ¥6,700。房间很小。sumyca 的取消规则：入住前 30 天内取消扣 20%（现在订就已在这个区间），15 天内扣 50%，8 天内扣 80%，7 天内全扣。官网直接订，支持中文，刷卡付款，16:00 自助入住、10:00 退房。</p>
+  </div>
+  <div class="dist"><b>30 分钟</b><span class="sub">步行 2.4 公里到参宮橋門<br>到 B 区篮球场约 40 分钟</span></div>
+  <div class="price"><b class="tot">¥164,117</b><span class="sub">每晚 ¥8,638 · 约人民币 7,000 元</span></div>
+  <div class="room"><span class="beds">16.1㎡ 单间 · 1 张双人床 · 限 2 人</span><div class="facs"><span class="fac">厨房</span><span class="fac">洗衣机</span></div><span class="sub">运营商自营，无评分</span></div>
+  <div class="links"><a href="https://stay.sumyca.com/en/properties/130287d6-f726-4e16-aa0c-bf3130756dbe/rooms/c91a23c2-a96a-4547-aa5c-f4b12164a1d0?checkIn=2026-12-03&amp;checkOut=2026-12-22&amp;adults=1&amp;children=1" target="_blank" rel="noopener">sumyca 订房页</a></div>
+</article>
+<article class="row c-apt" id="r-LM157343" data-id="LM157343" data-cat="apt" data-walk="2845" data-price="118500">
+  <div class="no"><span>24</span></div>
+  <div class="main">
+    <h3>LiVEMAX 京王代田桥/笹塚（世田谷区大原，需付满 30 天）</h3>
+    <p class="orig">LiveMax 月租 · #157343 · 世田谷区大原 1-51-9</p>
+    <p class="where">整套公寓 / 民宿 · LiveMax 官网 · 代田橋站步行 9 分钟</p>
+    <div class="tags"><span class="tag pick">整套最便宜（需付满30天）</span><span class="tag warn">远、小、旧</span></div>
+    <p class="note">「全包价」¥3,500/天 × 30 天 = ¥105,000，加孩子加收 ¥13,500。37 年的木造楼，14㎡ 加阁楼，离公园远。LiveMax 月租公寓最少签 30 天，住 19 晚也要按 30 天付；总价已含孩子加收的 5% 房租。接受外国人、免担保人（推荐另买 ¥40,000 的担保方案，未计入），可打 0120-713-860 用中文询价。</p>
+  </div>
+  <div class="dist"><b>36 分钟</b><span class="sub">步行 2.8 公里到西門<br>到 B 区篮球场约 39 分钟</span></div>
+  <div class="price"><b class="tot">¥118,500</b><span class="sub">每晚 ¥6,237 · 约人民币 5,000 元</span></div>
+  <div class="room"><span class="beds">14㎡ + 阁楼 · 限 2 人</span><div class="facs"><span class="fac">厨房</span></div><span class="sub">月租公寓，无评分</span></div>
+  <div class="links"><a href="https://www.weekly-monthly.net/tokyo/search/shousai/157343/" target="_blank" rel="noopener">LiveMax 房源页</a></div>
+</article>
+<article class="row c-hotel est" id="r-TOYOKO" data-id="TOYOKO" data-cat="hotel" data-walk="3643" data-price="256500">
+  <div class="no"><span>25</span></div>
+  <div class="main">
+    <h3>东横 INN 新宿歌舞伎町（连锁商务酒店）</h3>
+    <p class="orig">東横INN新宿歌舞伎町 · 歌舞伎町 2-20-15</p>
+    <p class="where">酒店 / 公共宿舍 · 官网 / 乐天 · 东新宿站步行 3 分钟，坐副都心线 3 站到明治神宫前（原宿）</p>
+    <div class="tags"><span class="tag warn">离公园远</span><span class="tag warn">需分段预订</span></div>
+    <p class="note">正规酒店里最便宜的一档：小学生和大人同睡一张床不收费，含早餐。但乐天上 12 月房源很紧，4 晚、7 晚的整段都显示满，需要拆成 7+7+5 晚分别订，最好在东横 INN 官网订。位于歌舞伎町夜生活区。走路到公园很远，坐地铁门到门约 20 分钟。估算总价按每晚 ¥13,500 计。</p>
+  </div>
+  <div class="dist"><b>46 分钟</b><span class="sub">步行 3.6 公里到参宮橋門<br>到 B 区篮球场约 55 分钟</span></div>
+  <div class="price"><b class="tot est">每晚约 ¥11,550–15,400</b><span class="sub">乐天近 30 天单人间价格区间（1 位大人，小学生同睡免费）。每次最多订 7 晚</span></div>
+  <div class="room"><span class="beds">单人间 12㎡（双人尺寸床），孩子同睡免费</span><div class="facs"><span class="fac">免费早餐</span></div><span class="sub">连锁酒店</span></div>
+  <div class="links"><a href="https://www.toyoko-inn.com/search/detail/00078" target="_blank" rel="noopener">官网</a> <a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/108351" target="_blank" rel="noopener">乐天</a></div>
+</article>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-notes" style="display:grid; gap:14px;">
+    <h2 id="h-notes">订之前要知道的</h2>
+    <div class="notes"><div class="note-card"><h3>为什么公园旁边几乎订不到民宿</h3><ul>
+<li><b>涩谷区：</b>公园周边的富ヶ谷、代々木、上原大多是住宅区。区里规定，房东不在场的民宿在这些区域每年只能在寒暑假等约 63 天营业，<b>10 月初到 12 月 25 日全面禁止</b>，所以 12/3–22 基本订不到。</li>
+<li><b>新宿区、中野区</b>住宅区：周一中午到周五中午不能营业。<b>世田谷区</b>住宅区：周一中午到周六中午不能营业。<b>目黑区</b>全区只能住周五、周六晚。</li>
+<li><b>能合法连住 19 晚的</b>只有这几类：有「旅館業」许可的酒店、旅馆和简易宿所；商业区里的民宿；符合条件的房东同住型民宿；1 个月起租的月租公寓。</li>
+<li>Airbnb 页面下方「Registration Details」里，M13 开头的是民宿登记号，可以问房东是不是在商业区；写旅館業许可的最稳。清单里每一家都按 12/3–22 实际查过能订。</li>
+</ul><p class="sub"><a href="https://files.city.shibuya.tokyo.jp/assets/12995aba8b194961be709ba879857f70/d06ba0466e004a5ca37f230da4c46e12/minpaku_kaisei_gaiyo.pdf" target="_blank" rel="noopener">涩谷区民宿规定（PDF）</a> · <a href="https://www.airbnb.com/help/article/2177" target="_blank" rel="noopener">Airbnb 日本登记说明</a></p></div>
+<div class="note-card"><h3>奥林匹克中心怎么订</h3><ul>
+<li>个人只能订 <b>B 栋带卫浴双人间</b>（或 D 栋单人间），每人每晚 ¥8,000，孩子同价，大人和孩子可以同住一间。</li>
+<li>入住日前 3 个月开放申请，用官网的「個人宿泊申込フォーム」，回复要 2 周左右。只收现金。</li>
+<li>原则最多 10 晚，12/7 休馆。18 岁以下要交「宿泊予約依頼書」（向中心要），非日本居民要交护照复印件。</li>
+<li>取消费：入住前 4 天 15:00 以后扣 50%，前 2 天扣 70%，前 1 天扣 100%，缩短住宿也照收。</li>
+<li>没有厨房，房间里不能吃东西。园内有食堂、咖啡店和 Lawson（7:00–22:00），没有门禁。</li>
+<li><b>团体：</b>5 人以上可以注册团体，约 2 周发团体号，符合青少年教育用途可按青少年价。外国俱乐部能不能适用没有确认，要问中心：电话 03-3469-2525（9:00–15:00）。</li>
+</ul></div>
+<div class="note-card"><h3>下单前确认这几件事</h3><ul>
+<li><b>孩子要算进人数。</b>预订时选「1 位成人 + 1 名儿童（10 岁）」。很多民宿按人头收费，少报人数到店可能被拒。</li>
+<li><b>看清床型。</b>「小双人床 / semi-double」只有约 120cm 宽，大人和 10 岁孩子同睡会挤，19 晚下来很累。优先选 2 张单人床、沙发床或上下铺。</li>
+<li><b>要有洗衣机。</b>每天训练换洗衣服多，最好带烘干；没有烘干的，附近一般有投币洗衣店（コインランドリー）。</li>
+<li><b>看取消规则。</b>Booking 最低价大多「不可退款」。日期没完全定下来时，先订能免费取消的，再慢慢比价。</li>
+<li><b>准备护照。</b>日本法律要求住宿登记外国人的护照号码和护照照片页，入住前房东或酒店会让你发，这是正常流程。</li>
+<li><b>早点订。</b>12 月中下旬接近圣诞和年末，便宜的整套公寓会越来越少，价格也会往上走。</li>
+</ul></div>
+<div class="note-card"><h3>每天怎么去公园</h3><ul>
+<li><b>篮球场：</b>公园南侧 B 区（NHK 一侧）有两块免费室外全场，在田径场和足球场之间。开放时间和夜间照明没查到，要问训练方。</li>
+<li><b>八公巴士 春の小川ルート：</b>大人小孩都是 ¥100，可刷 Suica / PASMO。新国立劇場（初台）到「代々木公園」约 14 分钟，本町一丁目过去约 20 分钟，大约 25 分钟一班，8:20–19:30 左右。网上的时刻表是 2018 年的，出发前再核对。</li>
+<li><b>京王巴士 渋63 / 渋64 / 渋66：</b>沿山手通り开往涩谷站，在「八幡下」「富ヶ谷」停，就在代々木八幡站、代々木公园站旁，大人约 ¥230。2026 年 9 月起这几条线可能不收现金，只能刷卡。</li>
+<li><b>电车：</b>幡ヶ谷、初台到代々木八幡要在新宿换乘，大人约 ¥256；代々木上原到代々木公园站坐千代田线 1 站。小学生半价。</li>
+<li><b>交通卡：</b>孩子可以办 Welcome Suica 儿童版（带孩子护照办），或在羽田、成田买 TOURIST PASMO 儿童版。都是 28 天有效，正好覆盖 12/3–22。</li>
+</ul><p class="sub"><a href="https://www.city.shibuya.tokyo.jp/kurashi/kotsu/hachiko/ogawa.html" target="_blank" rel="noopener">八公巴士 春の小川ルート</a></p></div>
+<div class="note-card"><h3>也查过，但没列进来的</h3><ul>
+<li><b>商务和连锁酒店：</b>1 大 1 小每晚普遍 ¥2.1–2.8 万，例如新宿华盛顿酒店约 ¥21,650–23,950，而且 12/3–22 整段都订不到。东急 Stay 每晚 ¥4 万以上，MIMARU、KARIO 更贵。清单里只留了樱花酒店和东横 INN。</li>
+<li><b>其他月租公寓</b>（Hmlet、Unito、Mynavi STAY、Modern Living 等）：最少签 1 个月，价格也不比清单里的低。Oakhouse 合租房一般不收 18 岁以下。</li>
+<li><b>公园 1.5 公里以内的整套</b>（涩谷站、道玄坂、代々木站一带）：Booking 上 19 晚普遍 ¥35–65 万。</li>
+<li><b>公园旁边的民宿单间</b>（富ヶ谷、代々木上原一带）：能连住的只找到 1 间，19 晚 ¥26 万。</li>
+<li><b>更远的西边</b>（下北沢、经堂、杉并区）：整套 19 晚 ¥16.5–20 万，不比初台一带便宜，每天还要坐车。</li>
+</ul></div></div>
+  </section>
+
+  <footer class="method"><p><b>价格</b>：2026 年 11 月 12 日按 12/3–12/22、1 位大人 + 1 名 10 岁孩子查询。Airbnb 取搜索结果里「含全部费用」的总价。Booking 取房价加页面标注的税费，其中部分是限时折扣价、会员价或不可退款价，换账号或改选可退款价会更贵。sumyca stay 取官网结账总价（房费 + 清洁费）。LiveMax 按房源页价格算 30 天，含孩子加收，不含可选的担保费。酒店价来自官网和乐天，只有区间或单日价的，按每晚 × 19 估算，地图和散点图上用空心点表示。</p>
+<p><b>距离</b>：坐标取自各平台房源页（Airbnb 只公开大致位置，误差约 100–300 米）或按地址用国土地理院地址检索定位。步行距离用 OpenStreetMap 路网和 OSRM 步行路线，算到公园最近的入口（参宮橋門、西門、原宿門、渋谷門、南門），按日本房产广告的标准 80 米/分钟折算。「B 区篮球场」指公园南侧（NHK 一侧）的室外篮球场。</p>
+<p>地图数据 © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors（ODbL）。汇率按 2026 年 11 月 9 日中国外汇交易中心中间价 100 日元 = 4.2378 元换算（约 1 元 = 23.6 日元，<a href="https://www.news.cn/fortune/20261109/7bea3383b7d44dc79d0f4262e1aea22e/c.html" target="_blank" rel="noopener">来源</a>）。</p></footer>
+</div>
+
+<script>
+(function () {
+  var list = document.getElementById('list');
+  var rows = Array.prototype.slice.call(list.querySelectorAll('.row'));
+  var marks = Array.prototype.slice.call(document.querySelectorAll('.mk, .sd'));
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function byId(id) { return document.getElementById('r-' + id); }
+  function hl(id, on) {
+    var r = byId(id); if (r) r.classList.toggle('hl', on);
+    marks.forEach(function (m) { if (m.getAttribute('data-id') === id) m.classList.toggle('hl', on); });
+  }
+  marks.forEach(function (m) {
+    var id = m.getAttribute('data-id');
+    m.addEventListener('mouseenter', function () { hl(id, true); });
+    m.addEventListener('mouseleave', function () { hl(id, false); });
+    m.addEventListener('focus', function () { hl(id, true); });
+    m.addEventListener('blur', function () { hl(id, false); });
+    function go() { var r = byId(id); if (!r || r.hidden) return; r.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' }); hl(id, true); setTimeout(function () { hl(id, false); }, 1600); }
+    m.addEventListener('click', go);
+    m.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+  });
+  rows.forEach(function (r) {
+    var id = r.getAttribute('data-id');
+    r.addEventListener('mouseenter', function () { hl(id, true); });
+    r.addEventListener('mouseleave', function () { hl(id, false); });
+  });
+  var fbtns = Array.prototype.slice.call(document.querySelectorAll('[data-f]'));
+  fbtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = b.getAttribute('data-f');
+      fbtns.forEach(function (x) { x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      rows.forEach(function (r) { r.hidden = !(f === 'all' || r.getAttribute('data-cat') === f); });
+      marks.forEach(function (m) { var r = byId(m.getAttribute('data-id')); m.classList.toggle('dim', !!(r && r.hidden)); });
+    });
+  });
+  var sbtns = Array.prototype.slice.call(document.querySelectorAll('[data-sort]'));
+  sbtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var k = b.getAttribute('data-sort');
+      sbtns.forEach(function (x) { x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      rows.slice().sort(function (a, c) { return (+a.getAttribute('data-' + k)) - (+c.getAttribute('data-' + k)); }).forEach(function (r) { list.appendChild(r); });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
